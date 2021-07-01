@@ -1,0 +1,85 @@
+{
+    "code": 0,
+    "data": [
+        {
+            "appName": "C家",
+            "appIcon": "http://200.200.200.58:8981/group1/M00/10/8F/yMjIOlsE0TCAa3hCAAAcR8Jfwf88974367",
+            "appId": 10120
+        },
+        {
+            "appName": "开放平台测试",
+            "appIcon": "",
+            "appId": 20001
+        },
+        {
+            "appName": "开放平台绑定",
+            "appIcon": "http://200.200.200.58:8981/group2/M01/04/4F/yMjIOlcE3A2AfkRyAACQeFvNgDI8124906",
+            "appId": 30048
+        },
+        {
+            "appName": "传奇舟助手",
+            "appIcon": "http://fileserver1.clife.net:8080/group1/M00/0B/0D/CvtlhlilXDOAJYTGAABNR9p0z4M9166566",
+            "appId": 30596
+        },
+        {
+            "appName": "iOS全能APP",
+            "appIcon": "http://200.200.200.58:8981/group2/M01/0D/EE/yMjIOlmVAfSAKKEUAAAcErxOTJg2646493",
+            "appId": 30601
+        },
+        {
+            "appName": "我的test哈哈",
+            "appIcon": "http://fileserver1.clife.net:8080/group1/M00/16/52/Cvtlhlk2YP6AbdlNAAAKLEykAH02066784",
+            "appId": 30677
+        },
+        {
+            "appName": "Demo App (专用勿删)",
+            "appIcon": "http://fileserver1.clife.net:8080/group1/M00/1E/1C/Cvtlp1nIXhWAC0AQAAAmkib7hxY0367771",
+            "appId": 30765
+        },
+        {
+            "appName": "多彩香薰机0817",
+            "appIcon": "http://200.200.200.58:8981/group1/M00/0D/EE/yMjIOlmUGtiAW41YAAAJ5DLKgFM7706204",
+            "appId": 30774
+        },
+        {
+            "appName": "智享德意",
+            "appIcon": "http://200.200.200.58:8981/group1/M00/0F/B9/yMjIOlqohhOAYgmDAAA-IFVYplE4834031",
+            "appId": 30889
+        },
+        {
+            "appName": "OpenClifeApp",
+            "appIcon": "http://200.200.200.58:8981/group1/M00/0F/A9/yMjIOlqmFWaANKtgAAAmkib7hxY9458370",
+            "appId": 31008
+        },
+        {
+            "appName": "开放更新",
+            "appIcon": "http://200.200.200.58:8981/group2/M01/0F/DA/yMjIOlrdghmAIn01AADmQGPAr3Q0203253",
+            "appId": 31028
+        },
+        {
+            "appName": "宏图三胞",
+            "appIcon": "http://fileserver1.clife.net:8080/group1/M00/A4/5E/Cvtlhlt7y4qAdfssAABnq-wUoPY2118695",
+            "appId": 31111
+        },
+        {
+            "appName": "clady",
+            "appIcon": "http://200.200.200.58:8981/group2/M01/13/CF/yMjIOlvhb7aAfLojAAAEn0Yt89U1663231",
+            "appId": 31255
+        },
+        {
+            "appName": "运营test1",
+            "appIcon": "http://200.200.200.58:8981/group2/M01/40/0E/yMjIOlwSD06ARkZWAAMGZ8FrYxc3754963",
+            "appId": 31262
+        },
+        {
+            "appName": "舌诊APP",
+            "appIcon": "http://fileserver1.clife.net:8080/group1/M01/4A/F2/Cvtlhly-8rGAdcCNAADhMWmzGRk8839791",
+            "appId": 31331
+        },
+        {
+            "appName": "自动化test",
+            "appIcon": "http://200.200.200.58:8981/group1/M00/51/8A/yMjIOlzmQvSAXjMsAAMGZ8FrYxc5084253",
+            "appId": 31348
+        }
+    ]
+}

@@ -1,0 +1,320 @@
+@import '../../../../../assets/css/variables.scss';
+
+.remote-config-wrapper {
+    padding:$gap/2 $gap;
+    background: #e9e9e9;
+
+
+    .remote-config-manage-wrapper{
+
+        h3{
+            font-size: $subTitleFontSize;
+            font-weight:600;
+            color:rgba(0,0,0,0.85);
+            line-height:28px;
+            margin-bottom: 24px;
+        }
+    }
+}
+
+
+.romote-modal{   
+    .romote-add-content{
+
+        height: 500px;
+        overflow: hidden;
+        padding: 0 $gap / 2;
+
+        .content-wrapper{
+
+            .step-0-wrapper{
+                width: 60%;
+                margin: $gap * 4 auto;
+
+
+                .step-0-lable{
+                    padding-right: 12px;
+                    align-self: flex-start;
+                }
+
+                .textarea-wrapper{
+                    
+                    &.warn{
+                        
+                        textarea{
+                            border-color: red;
+                        }
+
+                    }
+                }
+
+                .count-wrapper{
+                    padding-left: 12px;
+                    align-self: flex-end;
+                }
+            }
+
+            .step-1-wrapper{
+                padding-top: 12px;
+
+                p{
+                    text-align: center;
+                }
+
+                .table-wrapper{
+                    padding: 0 12px;
+
+                    .ant-table-content{
+
+                    }
+                }
+            }
+
+            .step-2-wrapper{
+                padding-top: 12px;
+                height: 100%;
+                .device-select-wrapper{
+                    height: 100%;
+
+                    .left,.right{
+                        padding: 0 24px;
+                    }
+
+                    .center{
+                        align-self: center;
+                    }                    
+                    .ant-select,.ant-input-search,.tools-wrapper {
+                        margin-bottom: 12px;
+                    }
+
+                    .tools-wrapper{
+                        a {
+                            margin-right: 12px;
+                            border-bottom: 1px solid #1890ff;
+
+                            &.disable{
+                                cursor: default;
+                                color: #ccc;
+                                border: none;
+                            }
+                        }
+                    }
+
+                    .ant-select{
+                        width: 100%;
+                    }
+
+                    .file-upload-area{
+                        margin-top: 24px;
+
+                        & > p {
+                            padding-left: 24px;
+                        }
+
+                        & > div{
+                            text-align: center;
+                            margin-top: 24px;
+
+                            .file-input-wrapper{
+                                position: relative;
+                                width: max-content;
+                                margin: 0 auto 12px;
+
+                                input{
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    opacity: 0;
+                                    cursor: pointer;
+                                }
+
+                            }
+
+                            .result-area{
+                                padding: 12px 12px 0;
+                                border: 1px solid #ccc;
+                                border-radius: 3px;
+                                width: 70%;
+                                margin: 0 auto;
+                            }
+
+                            .tools {
+                                margin: 12px auto 0;
+                                width: 70%;
+                                display: flex;
+                                
+                                a{
+                                    flex: 1;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+
+        
+        .r-footer{
+            text-align: center;
+
+            .ant-btn {
+                line-height: 0;
+            }
+            
+            span {
+                padding: 8px 30px;
+                button:first-of-type{
+                    margin-right: $gap
+                }
+
+                button:last-of-type{
+                    margin-left: $gap
+                }
+                
+            }       
+        }
+    }
+
+    .ant-table-thead > tr > th, .ant-table-tbody > tr > td{
+        padding: 4px 24px !important;
+
+        .config-send-data{
+            input,.ant-input-number,.ant-select{
+                width: 130px;
+            }
+
+            &.warn{
+                .ant-select-selection,
+                .ant-input-number,
+                input{
+                    border-color: red;
+                }
+            }
+        }
+    }
+
+    .romote-detail-content{
+        padding: 24px 36px;
+
+        h3{
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 24px;
+
+            &:not(:first-of-type){
+                margin-top: 36px;
+            }
+        }
+
+        .base-info{
+            & > p{
+
+                color: #ccc;
+
+                span:first-of-type{
+                    display: inline-block;
+                    width: 80px;
+                    text-align: right;
+                    margin-right: 24px;
+                    color: #000;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .device-wrapper{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            background-color: #eee;
+            border-radius: 2px;
+            padding: 12px 12px 6px;
+            text-align: center;
+            margin-bottom: 36px;
+
+
+            h4 {
+                font-size: 15px;
+                font-weight: bold;
+            }
+
+            div:last-of-type{
+                display: flex;
+
+                span{
+                    margin:auto;
+                    color: rgb(38, 148, 182);
+                    text-decoration: underline;
+                    cursor: pointer;
+
+                    &.disable {
+                        color: gray;
+                    }
+                }
+            }
+        }
+
+        .filter-wrapper{
+            padding: 12px 0;
+            .ant-select{
+                width: 120px;
+                margin-right: 12px;
+            }
+
+            .ant-input{
+                width: 240px;
+            }
+
+            & > span{
+                margin-left: 100px;
+                margin-right: 12px;
+            }
+
+            button{
+                float: right;
+                margin-left: 12px;
+            }
+        }
+    }
+
+    .remote-error-wrapper{
+        
+        & > div{
+            margin-bottom: 12px;
+            display: flex;
+
+           label{
+                width: 100px;
+                font-weight: bold;
+           }
+           
+           .msg-wrap{
+                flex: 1;
+
+                h4{
+                    margin-bottom: 16px;
+                }
+
+               .log-row{
+                   display: flex;
+                   line-height: 30px;
+                   padding-left: 12px;
+
+                   &:nth-child(2n){
+                       background-color: rgb(248, 248, 248);
+                   }
+
+                   .log-left-key,.log-right-content{
+                       flex: 1;
+                   }
+               }
+           }
+        }
+    }
+
+
+}
+

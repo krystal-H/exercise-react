@@ -1,0 +1,16 @@
+@import './../../../../assets/css/variables.scss';
+
+.add-version-modal {
+    font-family: PingFangSC-Medium, PingFang SC sans-serif;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    .add-version-from {
+        .ant-form-item {
+            margin-bottom: 12px;
+        }
+        .app-apk-desc, .url-desc, .update-desc {
+            color: rgba(140, 140, 140, 1);
+        }
+    }
+}

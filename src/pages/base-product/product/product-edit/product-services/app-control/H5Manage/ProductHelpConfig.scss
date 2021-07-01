@@ -1,0 +1,41 @@
+@import '../../../../../../../assets/css/variables.scss';
+
+.app-help-wrapper{
+    .img-wrapper{
+        width: 200px;
+        height: 90px;
+        line-height: 90px;
+        text-align: center;
+        // margin-top: $gap / 2;
+        // margin-left: $gap / 2;
+
+        // img{
+        //     height: 100%;
+        //     width: 100%;
+        // }
+    }
+    .img-wrapper.guide img{
+        width: 137px;
+        height: 66px;
+    }
+    .img-wrapper.fail img{
+        width: 48px;
+        height: 72px;
+    }
+    .bind-explain{
+        font-size: $contentFontSize;
+        line-height: 20px;
+        color:rgba(114,121,143,1);
+        margin: $gap / 2 0;
+
+        & > div {
+            margin-bottom: 3px;
+        }
+
+        & > span{
+            display: block;
+            font-size: $explainFontSize;
+            
+        }
+    }
+}

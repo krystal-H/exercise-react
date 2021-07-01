@@ -1,0 +1,24 @@
+.data-analysis-wrapper{
+    background-color: #f7f7f7;
+    height: 100%;
+    min-width: 1320px;
+
+    .ant-collapse{
+        border: none !important;
+        height: 100% !important;
+
+        .ant-collapse-item{
+            border-bottom: none !important;
+        }
+
+        .ant-collapse-header{
+            background-color: #f1f1f1 !important;
+            padding-top: 6px!important;
+            padding-bottom: 6px!important;
+        }
+
+        .ant-collapse-content-box{
+            background-color: #f7f7f7;
+        }
+    }
+}

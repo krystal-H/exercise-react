@@ -1,0 +1,61 @@
+@import './../../../assets/css/variables.scss';
+
+.user-info-box{
+    .basic-information-box{
+        // background-color: #fff;
+        // padding: $gap;
+        .but-edit{
+            float: right;
+            margin: 10px 52px 0 0;
+        }
+        
+        .name{
+            padding: $gap/2 0;
+            img{
+                width: 40px;
+                height: 40px;
+            }
+            h2{
+                display: inline-block;
+                margin-left: 20px;
+            }
+        }
+        .table{
+            td{
+                padding-left: 60px;
+            }
+        }
+    }
+    .eyeLeft{
+        margin-left: $gap;
+    }
+
+    .device-info{
+        display: grid;
+        padding: $gap $gap 0 $gap;
+        grid-template-columns: 30% 35% 35%;
+        grid-row-gap: $gap/2;
+        grid-column-gap: $gap / 4;
+        color: rgba(0, 0, 0, 0.65);
+
+        .list-item{
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            .title{
+                font-weight: bold;
+            }
+        }
+    }
+
+    .userlook-mark{
+        margin: $gap / 2 0 0 $gap;
+        padding-bottom: $gap;
+
+        span{
+            font-weight: bold;
+        }
+    }
+
+    
+}

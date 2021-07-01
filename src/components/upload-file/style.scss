@@ -1,0 +1,28 @@
+@import './../../assets/css/variables.scss';
+
+.upload-wrapper {
+    font-size: 12px;
+    font-family: PingFang-SC-Medium, PingFang-SC sans-serif;
+    font-weight: 500;
+    color: rgba(102, 102, 102, 1);
+    .upload {
+        position: relative;
+        .upload-component {
+            min-height: 100px;
+        }
+        .upload-desc, .file-upload-desc {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(140, 140, 140, 1);
+        }
+        .file-upload-desc {
+            position: absolute;
+            top: 0;
+            left: 120px;
+        }
+        .upload-desc {
+            display: block;
+            margin-top: 10px;
+        }
+    }
+}

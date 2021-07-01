@@ -1,0 +1,379 @@
+@import './../../../assets/css/variables.scss';
+
+.page-main-wrapper{
+    height: 100%;
+    min-height: 520px;
+
+    .page-content-header{
+        height: max-content;
+        background-color: $sectionBgColor;
+        padding: $gap/2 $gap $gap * 2/3;
+
+
+        .page-name{
+            height:28px;
+            font-size: $titleFontSize;
+            font-family:PingFangSC-Medium;
+            font-weight:500;
+            color:rgba(0,0,0,0.85);
+            line-height:28px;
+        }
+
+        .input-wrapper{
+            width: 40%;
+        }
+    }
+}
+.devicelistpage{
+    .page-content-header{
+        .ant-select{
+            vertical-align: top;
+        }
+        .count-data-box{
+            margin-top: 28px;
+            .device-inine-data{
+                vertical-align: top;
+                display: inline-block;
+                li{
+                    display: inline-block;
+                    padding-right:30px;
+                    font-size: 14px;
+                    color: #8f8f8f;
+                    text-align: center;
+    
+                    p{
+                        margin-bottom: 5px;
+                    }
+                    .count{
+                        font-weight: bold;
+                        font-size: 26px;
+                        color: rgba(0, 0, 0, 0.85);
+                    }
+                }
+    
+                li+li{
+                    border-left: solid 1px #dedede;
+                    padding: 0 30px;
+                }
+    
+                .icon-cube{
+                    width: 10px;
+                    height: 10px;
+                    margin-right: 10px;
+                    display: inline-block;
+                    background-color: #84afff;
+                    box-shadow: #84afff 0 0 10px;
+                    transition: box-shadow 2s ease-in-out;
+                }
+            }
+            .device-refresh{
+                margin-left: 2*$gap;
+                display: inline-block;
+                cursor: pointer;
+                .device-refresh-icon{
+                    margin-left: 10px;
+                    color: #84afff;
+                }
+            }
+        }
+
+        
+    }
+    .search-info-box{
+        .type-select{
+            width:102px
+        }
+        .input{
+            width:150px
+        }
+
+    }
+    .btn-exportdata{
+        float: right;
+        margin-top: -40px;
+    }
+    .searchBut{
+        margin-top: -35px;
+    }
+    .list-pagination{
+        height: max-content;
+        margin-top: $gap;
+        padding: 0 $gap $gap 0;
+        overflow: hidden;
+        .self-pa{
+            width: max-content;
+            float: right;
+        }
+    }
+
+    .lineSearchBox{
+        margin-top: 12px;
+    }
+
+    .inputbox{
+        margin-top: 14px;
+        select {
+            width:100px;
+        }
+        input{
+            width:260px;
+        }
+    }
+    .idmacinput{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .labelinput{
+        display: inline-block;
+        vertical-align: middle;
+        input{
+            margin-right: 10px;
+        }
+    }
+    .btn{
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 16px;
+    }
+    .devicetablelist{
+        margin-top: 24px;
+    }
+}
+.devicepage{
+    .headerbox{
+        // height: 58px;
+        padding: 0 $gap;
+        background-color: $sectionBgColor;
+    }
+    // .maintext{
+    //     white-space: nowrap;
+    //     .keyvalue{
+    //         display: inline-block;
+    //         margin-right: 4*$gap;
+    //         font-weight: bold;
+    //         .key{
+    //             display: inline-block;
+    //             text-align: right;
+    //         }
+    //     }
+    // }
+    .maintext{
+        display: flex;
+        white-space: nowrap;
+        justify-content: space-between;
+        .keyvalue{
+            flex: 1 auto;
+            // margin-right: 4*$gap;
+            font-weight: bold;
+            .key{
+                display: inline-block;
+                text-align: right;
+            }
+        }
+    }
+    
+    .eyestoggle{
+        margin-left: 8px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 14px;
+        height: 22px;
+        background: url(../../../assets/images/eyes.png) no-repeat center;
+    }
+    .alone-section-wrapper{
+        margin: $gap/2 $gap $gap;
+        .device-info{
+            display: grid;
+            padding: $gap;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-row-gap: $gap/2;
+            color: rgba(0, 0, 0, 0.65);
+
+            .title{
+                font-weight: bold;
+            }
+        }
+    }
+
+    .tabdevice{
+        padding-top: 12px;
+        .labeltable{
+            margin: 24px 0 16px;
+            width: 100%;
+            th,td{
+                padding: 16px;
+                text-align: left;
+            }
+            thead,tr{
+                border-bottom: 1px solid #E9E9E9;
+            }
+            thead{
+                th{
+                    font-weight: 500;
+                }
+                background-color: #FAFAFA;
+            }
+
+
+        }
+
+    }
+    .list-pagination{
+        height: max-content;
+        padding: 0 $gap $gap 0;
+        .self-pa{
+            width: max-content;
+            float: right;
+        }
+    }
+
+}
+
+.device-secret-wrapper {
+    height: 100%;
+    min-height: 520px;
+    font-family: PingFangSC-Medium, PingFang SC sans-serif;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    .device-secret-header {
+        background-color: $sectionBgColor;
+        .device-secret-statistic {
+            position: relative;
+            padding: 24px;
+            .common-id, .used, .register, .unregistered {
+                float: left;
+                width: 24%;
+                border-right: 1px solid #E8E8E8;
+                padding-left: 8px;
+                div:first-child {
+                    font-size: 14px;
+                    color: #8F8F8F;
+                }
+                div:last-child {
+                    font-size: 30px;
+                    font-weight: 600;
+                }
+            }
+            .unregistered.time{
+                div:last-child {
+                    font-size: 24px;
+                    font-weight: 400;
+                }
+            }
+            .unregistered {
+                border-right: none;
+            }
+            .export-data {
+                position: absolute;
+                right: 56px;
+                bottom: 16px;
+                color: #2F78FF;
+            }
+        }
+    }
+    .device-secret-content-wrapper {
+        padding: $gap;
+        .device-secret-content {
+            min-height: 100%;
+            background-color: $sectionBgColor;
+            h4 {
+                height: 56px;
+                line-height: 56px;
+                padding-left: 20px;
+                font-weight: 600;
+                border-bottom: 1px solid rgba(232, 232, 232, 1);;
+            }
+            .search-form {
+                padding: 20px;
+            }
+            .content {
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+.device-warningpage{
+    .addwarning-btn{
+        text-align: right;
+        padding-bottom: 12px;
+    }
+   
+}
+
+.device-warningconfigpage {
+    font-family: PingFangSC-Medium, PingFang SC sans-serif;
+    color: rgba(0, 0, 0, 0.85);
+    height: 100%;
+    // .step-header-wrapper {
+    //     background-color: $sectionBgColor;
+    //     .step-header {
+    //         width: 70%;
+    //         height: 80px;
+    //         margin: 0 auto;
+    //         background: rgba(248, 248, 248, 1);
+    //         .step-item {
+    //             height: 100%;
+    //             color: rgba(153, 153, 153, 1);
+    //             justify-content: center;
+    //             align-items: center;
+    //             i {
+    //                 width: 30px;
+    //                 height: 30px;
+    //                 background: url(../../../assets/images/data-subscribe/subscribe_product.png) no-repeat center;
+    //                 background-size: 30px 30px;
+    //             }
+    //             .step-data {
+    //                 background-image: url(../../../assets/images/data-subscribe/subscribe_data.png);
+    //             }
+    //             .step-way {
+    //                 background-image: url(../../../assets/images/data-subscribe/subscribe_way.png);
+    //             }
+    //         }
+    //         .current-step {
+    //             color: #fff;
+    //             background-color: #2F78FF;
+    //             .circle-number {
+    //                 border: 1px solid #fff;
+    //             }
+    //         }
+    //         .current-step::after {
+    //             border-left: 20px solid #2F78FF;
+    //         }
+    //         .current-step::before {
+    //             background-color: #2F78FF;
+    //         }
+    //     }
+    // }
+    .add-content-wrapper {
+        padding: 24px;
+        .add-content {
+            height: 100%;
+            background-color: $sectionBgColor;
+            .steps-content {
+                width: 70%;
+                margin: 0 auto;
+                padding-top: 50px;
+            }
+            .steps-action {
+                background-color: $sectionBgColor;
+            }
+        }
+    }
+}
+
+.warningdetail-page{
+    .detail-label{
+        text-align: right;
+        font-weight: 600;
+    }
+    .border-texarea{
+        padding: 10px;
+        border: 1px solid rgb(232, 232, 232);
+    }
+}
+
+
+
+

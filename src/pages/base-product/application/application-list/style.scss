@@ -1,0 +1,155 @@
+@import './../../../../assets/css/variables.scss';
+
+.application-wrapper {
+    height: 100%;
+    min-height: 520px;
+    .application-header {
+        .application-search {
+            padding:0 20px;
+            height: 38px;
+            background-color: $sectionBgColor;
+            .application-header-input-wrapper {
+                width: 40%;
+            }
+        }
+    }
+    .application-content-wrapper {
+        padding: $gap;
+        .application-content {
+            height: 100%;
+            padding: 20px 32px;
+            background-color: $sectionBgColor;
+            .lists-wrapper {
+                justify-content: flex-start;
+                align-content: flex-start;
+                flex-wrap: wrap;
+                padding: $gap;
+                .list-item {
+                    margin: 0 $gap $gap $gap;
+                    width: 46%;
+                    height: 45%;
+                    background-color: $sectionBgColor;
+                    border-radius: $borderRadius;
+                    border: 1px solid rgba(217, 217, 217, 1);
+                    font-weight: 400;
+                    color: rgba(0, 0, 0, 0.45);
+                    .application-item-card {
+                        position: relative;
+                        height: 100%;
+                        padding: 16px $gap 0 $gap;
+                        .application-info {
+                            padding-left: 20px;
+                            justify-content: space-around;
+                            .name {
+                                display: block;
+                                font-size: 20px;
+                                font-family: PingFangSC-Medium, PingFang SC serif;
+                                font-weight: 600;
+                                color: rgba(0, 0, 0, 0.85);
+                                line-height: 24px;
+                            }
+                            .name:hover {
+                                color: $themeColor;
+                            }
+                            .type {
+                                font-size: 14px;
+                                font-family: PingFangSC-Regular, PingFang SC serif;
+                                font-weight: 400;
+                                color: rgba(0, 0, 0, 0.45);
+                                line-height: 22px;
+                            }
+                            .application-desc {
+                                word-break: break-all;
+                                min-height: 46px;
+                                font-size: 14px;
+                                font-family: HelveticaNeue sans-serif;
+                                color: rgba(0, 0, 0, 0.45);
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;
+                                overflow: hidden;
+                            }
+                        }
+                        .del-app {
+                            display: none;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 40px;
+                            line-height: 40px;
+                            text-align: center;
+                            cursor: pointer;
+                            background-color: $sectionBgColor;
+                            border-top: 1px solid #E9E9E9;
+                        }
+                        &:hover {
+                            .del-app {
+                                display: block;
+                                color: $themeColor;;
+                            }
+                        }
+                    }
+                }
+            }
+            .application-list-pagination {
+                height: max-content;
+                padding: 0 $gap $gap 0;
+                .self-pa {
+                    float: right;
+                    width: max-content;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 769px) {
+    .application-wrapper {
+        .application-content-wrapper {
+            padding: 1/2*$gap;
+            .application-content {
+                height: 100%;
+                padding: 6px 12px;
+                background-color: $sectionBgColor;
+                .lists-wrapper {
+                    padding: 1/2*$gap;
+                    .list-item {
+                        margin: 0 1/2*$gap 1/4*$gap 1/2*$gap;
+                        width: 45%;
+                        height: 48%;
+                        .application-item-card {
+                            padding: 8px 12px 0 8px;
+                            .icon-wrapper {
+                                width: 80px;
+                                height: 80px;
+                            }
+                        }
+                    }
+                }
+                .application-list-pagination {
+                    height: max-content;
+                    padding: 0 $gap 1/3*$gap 0;
+                    .self-pa {
+                        float: right;
+                        width: max-content;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.add-application-wrapper {
+    .application-form {
+        .android-input, .ios-input {
+            margin-bottom: 0;
+        }
+        .app-img-desc, .app-type-desc {
+            font-size: 13px;
+            font-family: PingFangSC-Regular, PingFang SC sans-serif;
+            font-weight: 400;
+            color: rgba(140, 140, 140, 1);
+        }
+    }
+}

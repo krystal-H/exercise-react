@@ -1,0 +1,30 @@
+/****************定义混合器*********************/
+
+@mixin self-border ($borderRadius,$borderColor){
+    border-radius: $borderRadius;
+    border:1px solid $borderColor;
+}
+
+@mixin self-scroll-bar(){
+    &::-webkit-scrollbar{
+        background:rgba(255,255,255,1);
+        width:8px;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background:rgba(217,217,217,1);
+        border-radius:5px;
+    }
+}
+
+// @mixin menu-width {
+//     width: $menuWidth;
+//     min-width: $menuWidth;
+//     @media screen and (max-width:1400px){
+//         width: $smallMenuWidth;
+//         min-width: $smallMenuWidth;
+//     }
+// }
+
+
+/********************END***********************/

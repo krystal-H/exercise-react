@@ -1,0 +1,116 @@
+@import '../../../../../assets/css/variables.scss';
+
+.product-item-card{
+    height: 100%;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+
+    .product-info{
+        padding: $gap * 1.5;
+        height: 100%;
+
+        .product-info-header{
+            height: 24px;
+            line-height:24px;
+
+            .name{
+                font-size: $subTitleFontSize;
+                font-weight:400;
+                color: $fontColor;
+            }
+            .name:hover{
+                color:$themeColor;
+                cursor: pointer;
+            }
+        
+            .status{
+                display: inline-block;
+                margin-left: $gap;
+                padding: 0 $gap / 2;
+                font-size:12px;
+                font-family:PingFangSC;
+                font-weight:400;
+                border-radius: 2px;
+
+                &.status-0{
+                    color:$doneColor;
+                    background-color: rgba(238, 251, 230, 1);
+                }
+                &.status-1{
+                    color:$underWayColor;
+                    background-color: rgba(235, 247, 255, 1);
+
+                }
+                &.status-2{
+                    color:$unusualColor;
+                    background-color: rgba(253, 244, 232, 1);
+
+                }
+            }
+        }
+
+        .product-tags{
+            line-height: $gap;
+        }
+    
+        .product-cut{
+            padding-top: $gap;
+            padding-right: $gap / 2;
+        }
+
+        .product-info-body{
+            font-size: $contentFontSize;
+            line-height: $gap * 1.5;
+            font-weight:400;
+            color:$grayFontColor;
+            margin: $gap / 2 0;
+            
+            .infos{
+                span{
+                    flex: 1;
+                    color: rgba(0,0,0,0.45);
+                }
+            }
+        }
+    }
+
+    
+    &:hover{
+        .btn-controls{
+            left: 0;
+        }
+    }
+
+    .btn-controls{
+        width: 100%;
+        position: absolute;
+        left: 100%;
+        bottom: 0;
+        height:48px;
+        line-height: 48px;
+        background:rgba(247,249,250,1);
+        border-radius:0px 0px $borderRadius $borderRadius;
+        border:1px solid rgba(233,233,233,1);
+        font-size:15px;
+        transition: left .5s ease-in-out;
+
+        span{
+            display: inline-block;
+            width: 49%;
+            text-align: center;
+            cursor: pointer;
+
+            &.isOk {
+                &:hover{
+                    transform: translateY(-2px);
+                }
+            }
+
+            &.disable{
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+

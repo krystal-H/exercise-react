@@ -1,0 +1,52 @@
+@import './../../../../assets/css/variables.scss';
+
+.detail-subscription-wrapper {
+    font-family: PingFangSC-Medium, PingFang SC sans-serif;
+    color: rgba(0, 0, 0, 0.85);
+    min-height: 100%;
+    .detail-content-wrapper {
+        padding: 24px;
+        position: relative;
+        .detail-content {
+            min-height: 100%;
+            padding: 24px;
+            background-color: $sectionBgColor;
+            .detail-line {
+                .detail-left {
+                    text-align: right;
+                }
+                .detail-right {
+                    font-weight: 400;
+                    .label-item,.protocol-type-list-item {
+                        margin:0 6px 6px 0;
+                        height: 40px;
+                        line-height: 40px;
+                        background: rgba(250, 250, 250, 1);
+                        padding: 0 6px;
+                    }
+                    .protocol-wrapper{
+                        .protocol-type{
+                            .protocol-type-name{
+                                margin-bottom: 10px;
+                            }
+                            .protocol-type-list{
+
+                            }
+                        }
+                    }
+                }
+                .product-label {
+                    height: 40px;
+                    line-height: 40px;
+                }
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .edit-wrapper{
+        position: absolute;
+        top: $gap * 2;
+        right: $gap * 2;
+    }
+}

@@ -1,0 +1,30 @@
+@import './../../../../assets/css/variables.scss';
+
+.detail-method-wrapper {
+    .detail-title {
+        padding: 16px 0 16px 32px;
+        background-color: $sectionBgColor;
+    }
+    .detail-content-wrapper {
+        padding: 24px;
+        .detail-content {
+            padding: 32px;
+            background-color: $sectionBgColor;
+            ul {
+                list-style: none;
+                li {
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 16px;
+                    .key {
+                        display: inline-block;
+                        width: 100px;
+                    }
+                    .value {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}

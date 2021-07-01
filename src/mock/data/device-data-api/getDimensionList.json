@@ -1,0 +1,41 @@
+{
+    "code": 0,
+    "data": {
+        "dataDimension": [
+            {
+                "dimensionName": "wxqcl",
+                "dimensionDesc": "jxnev"
+            },
+            {
+                "dimensionName": "wxqcl",
+                "dimensionDesc": "jxnev"
+            },
+            {
+                "dimensionName": "wxqcl",
+                "dimensionDesc": "jxnev"
+            },
+            {
+                "dimensionName": "wxqcl",
+                "dimensionDesc": "jxnev"
+            }
+        ],
+        "dataIndex": [
+            {
+                "indexName": "wxqcl2",
+                "indexNameDesc": "jxnev2"
+            },
+            {
+                "indexName": "wxqcl2",
+                "indexNameDesc": "jxnev2"
+            },
+            {
+                "indexName": "wxqcl2",
+                "indexNameDesc": "jxnev2"
+            },
+            {
+                "indexName": "wxqcl2",
+                "indexNameDesc": "jxnev2"
+            }
+        ]
+    }
+}

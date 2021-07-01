@@ -1,0 +1,141 @@
+@import './../../../../assets/css/variables.scss';
+
+.devicegroup-box{
+    .page-content-header{
+        height: max-content;
+        background-color: $sectionBgColor;
+        padding: $gap * 2/3 $gap;
+        margin-bottom: $gap;
+        .page-title{
+            padding-left: 0;
+        }
+        .page-name{
+            height:28px;
+            font-size: $titleFontSize;
+            font-family:PingFangSC-Medium;
+            font-weight:500;
+            color:rgba(0,0,0,0.85);
+            line-height:28px;
+        }
+        .input-wrapper{
+            width: 40%;
+        }
+    }
+    .title-content{
+        background-color: #fff;
+        padding: $gap;
+    }
+    .ant-divider{
+        margin: 0 4px;
+    }
+    table{
+        table-layout: fixed;
+        td{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+    .colordot:before{
+        content:" ";
+        display: inline-block;
+        margin:0 6px 2px 0;
+        width: 6px;
+        height: 6px;
+        border-radius: 100%;
+        background-color: #F04242;
+    }
+    .colordot{
+        display: inline-block;
+    }
+    .colordotred:before{
+        background-color: #F04242;
+    }
+    .colordotgreen:before{
+        background-color: #1AC41C;
+    }
+}
+
+.groupdetailpage{
+    .descriptions{
+        width: 700px;
+        .ant-descriptions-item-label{
+            font-weight: bold;
+        }
+
+    }
+    
+    .page-content-header{
+        position: relative;
+        padding-right: 300px;
+
+        .device-inine-data{
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            right: 0;
+            top: 10px;
+            li{
+                display: inline-block;
+                padding: 0 30px;
+                font-size: 14px;
+                color: #8f8f8f;
+                text-align: center;
+        
+                p{
+                    margin-bottom: 5px;
+                }
+                .count{
+                    font-weight: bold;
+                    font-size: 26px;
+                    color: rgba(0, 0, 0, 0.85);
+                }
+            }
+        
+            li+li{
+                border-left: solid 1px #dedede;
+            }
+        
+            .icon-cube{
+                width: 10px;
+                height: 10px;
+                margin-right: 10px;
+                display: inline-block;
+                background-color: #84afff;
+                box-shadow: #84afff 0 0 10px;
+                transition: box-shadow 2s ease-in-out;
+            }
+        }
+
+    }
+
+    .search-box{
+        padding: 10px 0 15px;
+        .but-add{
+            float: right;
+            margin-top: -56px;
+        }
+    }  
+
+}
+
+.groupadd-device-modal{
+    .addtype{
+        margin-bottom: 10px;
+        text-align: right;
+    }
+    .list-content{
+        margin-top: 20px;
+        height: 550px;
+        overflow-y: auto;
+    }
+    .ant-modal-body{
+        padding-bottom: 0;
+    }
+    tr{
+        th,td{padding: 12px 14;}
+    }
+}
+
+
+

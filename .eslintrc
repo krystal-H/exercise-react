@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "parser": "@typescript-eslint/parser", // 指定解析器
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "legacyDecorators": true,
+    "sourceType": "module",
+    "allowImportExportEverywhere": true,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "globals": {
+    "_": "readonly"
+  },
+  // "extends": "eslint:recommended", // 启用默认的核心规则，新手慎用
+  "extends": "react-app",
+  "rules": {
+    "eqeqeq": "warn",
+    "indent": "off",
+    "quotes": "off", // ["error", "double"]
+    "semi": "off", //["error", "always"],
+    "no-console": "off",
+    "jsx-a11y/anchor-is-valid": "off"
+  }
+}

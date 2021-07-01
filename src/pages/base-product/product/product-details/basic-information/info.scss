@@ -1,0 +1,148 @@
+@import '../../../../../assets/css/variables.scss';
+
+.product_info{
+    border-top: $gap solid #f0f2f5;
+    .commonContentBox{
+        margin: 0;
+        border-bottom: $gap solid #f0f2f5;
+        border-right: $gap solid #f0f2f5;
+        border-left: $gap solid #f0f2f5;
+        .links{
+            color: $themeColor;
+            cursor: pointer;
+            margin-bottom: 8px;
+        }
+        .common_title{
+            padding: 0;
+        }
+        .strategy{
+            position: relative;
+            display: inline-block;
+            // margin: 0 1%;
+            width: 220px;
+            height: 260px;
+            border: $grayBorder;
+            border-radius: $borderRadius;
+            overflow: hidden;
+            .strategy-content{
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                .strategy-img{
+                    display: block;
+                    margin: 15px auto;
+                    width: 80px;
+                    height: 80px;
+                    border: $grayBorder;
+                    border-radius: 10px;
+                }
+                .moduleTypeName{
+                    text-align: center;
+                }
+                .moduleDetails{
+                    margin: 5px 15px ;
+                    text-align: left;
+                }
+                .moduleLink{
+                    position: absolute;
+                    color: $themeColor;
+                    cursor: pointer;
+                    bottom: 10px;
+                    left: 10px;
+                }
+            }
+        }
+        .table, .download{
+            display: inline-block;
+            vertical-align: top;
+        }
+        .table{
+            margin: 0 30px;
+            width: 40%;
+            table{
+                width: 100%;
+                tr{
+                    border: 1px solid #ddd;
+                    td{
+                        width: 50%;
+                        padding: 12px 15px;
+                        input{
+                            height: 24px;
+                            margin-left: -10px;
+                            padding: 0 10px;
+                            border: 1px solid #ddd;
+                            border-radius: $borderRadius;
+                        }
+                    }    
+                }
+            }
+        }
+        .download{
+            width: 30%;
+            table{
+                width: 100%;
+                td{
+                    padding: 6px 0;
+                }   
+            }
+            .commonButBox{
+                margin: 12px 0;
+            }
+            .explain{
+                text-align: center;
+                cursor: pointer;
+                font-size: 14px;
+                color: #2F78FF;
+            }
+        }
+        .update_box{
+            display: inline-block;
+            float: right;
+            cursor: pointer;
+            .update,.createTime{
+
+                font-size: 14px;
+                font-weight: 500;
+            }
+            .update{
+                margin-left: 10px;
+                padding: 5px 20px;
+                background-color: #2F78FF;
+                color: #fff;
+                border-radius: $borderRadius;
+            }
+            .under_review{
+                background-color: $grayBorderColor;
+            }
+        }
+    }
+    .introductionBar{
+        display: inline-block;
+        vertical-align: top;
+        .protitle, .content{
+            display: inline-block;
+        }
+        .protitle{
+            width: 30%;
+            vertical-align: top;
+            text-align: right;
+        }
+        .content{
+            width: 70%;
+        }
+        .productPic{
+            width: 60px;
+            height: 60px;
+            margin: 20px 20px 0 0;
+        }
+        .common_title_input{
+            word-break: break-all;
+            .common_content{
+                max-width: 70%;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,55 @@
+.all-data-wrapper{
+    display: flex;
+    flex-direction: row;
+
+    .data-item{
+        flex: 1;
+        text-align: center;
+
+        &:not(:last-child) {
+            border-right: 1px solid #ccc;
+        }
+
+        p{
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+}
+
+.serve-log-wrapper{
+    padding: 12px 24px;
+}
+
+.static-flow-wrapper{
+    padding: 0 24px;
+    height: calc(100vh - 223px);
+
+    .relative-wrapper{
+        position: relative;
+        height: 100%;
+    }
+}
+
+.sql-modal-self-class{
+    .type-select{
+        height: 80px;
+        line-height: 80px;
+        display: flex;
+        flex-direction: row;
+
+        & > span{
+            flex: 1;
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 400;
+
+            &:hover{
+                color: rgb(1, 138, 250);
+                font-weight: 600;
+                font-size: 21px;
+            }
+        }
+    }
+}

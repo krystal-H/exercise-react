@@ -1,0 +1,286 @@
+@import '../../../assets/css/variables.scss';
+@import '../../../assets/css/tools.scss';
+
+.f-s-wrapper{
+    
+    &.in-page{
+        display: block;
+        overflow-y: scroll;
+
+        @include self-scroll-bar;
+
+        .f-s-content-wrapper{
+            height: auto;
+            min-height: calc(100% - 48px);
+            width: calc(100% - 48px);
+            margin: 24px;
+        }
+    }
+
+    .f-s-content-wrapper{
+        height: 90%;
+        min-height: 400px;
+        width: 80%;
+        min-width: 1000px;
+        margin: auto;
+
+        .content-area{
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+        
+            .sub-title{
+                text-align: center;
+                margin-top: $gap * 2;
+                font-size: $titleFontSize;
+                color: $fontColor;
+                font-weight: 600;
+            }
+
+            .flow-chart-wrapper,.select-verify-type-wrapper{
+                width: 900px;
+                margin: $gap * 2 auto 0;
+            }
+
+            .select-verify-type-wrapper{
+
+                .verify-type-item{
+                    padding: $gap;
+                    margin-top: $gap / 2;
+                    background:rgba(250,250,250,1);
+                    border-radius:2px;
+                    color: rgba(0,0,0,0.65);
+
+                    h3 {
+                        font-size: $subTitleFontSize;
+                        font-weight: 600;
+                        margin-bottom: $gap / 2;
+                    }
+
+                    .float-right{
+                        float: right;
+                        cursor: pointer;
+                        
+                        span,img{
+                            vertical-align: middle;
+                        }
+
+                        span{
+                            color: rgba(47,120,255,1);
+                        }
+
+                        img{
+                            height: 14px;
+                            border: none;
+                        }
+                    }
+                }
+            }
+
+            .desc{
+                text-align: center;
+                margin-top: $gap * 2;
+                font-size: $contentFontSize;
+                font-weight:600;
+                color:rgba(0,0,0,1);
+
+                &.second{
+                    margin-top: $gap;
+                }
+            }
+
+            .mail-content-wrapper{
+                width: 70%;
+                margin: $gap auto $gap * 3;
+                font-size: $subTitleFontSize; 
+                color:rgba(0,0,0,1);
+                line-height:40px;
+
+                &.bg-gray{
+                    color: rgba(0, 0, 0, 0.65);
+                    margin: $gap * 2 auto 0;
+                    background:rgba(250,250,250,1);
+                    border-radius: 3px;
+                    line-height: 33px;
+                    padding: $gap $gap * 2; 
+
+                    .mail-title{
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .mail-title{
+                    font-weight: 600;
+                    margin-bottom: 40px;
+                }
+            }
+
+            .button-wrapper{
+                width: 200px;
+                margin: $gap auto 0;
+
+                .ant-btn{
+                    width:100%;
+                }
+            }
+
+            .img-wrapper{
+                width: 120px;
+                text-align: center;
+                margin: $gap auto 0;
+
+                img{
+                    width: 90%;
+                    margin-bottom: $gap / 2;
+                }
+
+                span{
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+
+                &.ok {
+                    span{
+                        color:rgba(47,120,255,1);
+                    }
+                }
+                &.error {
+                    span{
+                        color:rgba(244,50,0,1);
+                    }
+                }
+            }
+        
+            .right-top{
+                position: absolute;
+                top: - $gap * 2;
+                right: $gap * 2;
+                font-size: 16px;
+        
+                .tip{
+                    color:rgba(0,0,0,0.45);
+                    margin-right: $gap / 2;
+                }
+        
+            }
+        
+            .form-wrapper{
+                width: 360px;
+                margin: $gap * 2 auto 0 ;
+
+                &.for-close-account{
+                    width: 80%;
+
+                    .ant-btn{
+                        width:360px;
+                    }
+
+                    .ant-row,.ant-col{
+                        line-height: 40px;
+                        .ant-input{
+                            height: 30px;
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                .ant-btn{
+                    width:100%;
+                }
+                
+                .ant-checkbox-wrapper{
+                    font-size: 13px;
+                }
+
+                .ant-form-item-label label {
+                    font-size:18px;
+                    font-weight:600;
+                }
+            }
+
+            .code-img-wrapper{
+                height: 40px;
+            }
+
+            .ant-form-explain{
+                line-height: 2;
+            }
+
+            .ant-input,.ant-btn{
+                height: 40px;
+                font-size:$contentFontSize;
+
+                img{
+                    height: 100%;
+                    vertical-align:top;
+                }
+            }
+
+            .center{
+                text-align: center;
+            }
+
+        }
+    }
+
+
+    @media screen and (max-height: 769px) {
+
+        .f-s-content-wrapper{
+
+            .content-area{
+
+                .sub-title{
+                    margin-top: $gap;
+                }
+
+                .right-top{
+                    top: - $gap;     
+                }
+
+                .desc{
+                    margin-top: $gap / 2;
+                }
+
+                .img-wrapper{
+                    margin: 0 auto;
+    
+                    img{
+                        margin-bottom: $gap / 2;
+                    }
+    
+                    span{
+                        font-size: 14px;
+                    }
+                }
+
+                .flow-chart-wrapper,.select-verify-type-wrapper{
+                    margin: $gap auto 0;
+                }
+
+                .form-wrapper{
+                    margin: $gap auto 0 ;
+                }
+
+                .code-img-wrapper{
+                    height: 40px;
+                }
+            
+                .ant-form-explain{
+                    line-height: 2;
+                }
+            
+                .ant-input,.ant-btn{
+                    height: 40px;
+            
+                    img{
+                        height: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+

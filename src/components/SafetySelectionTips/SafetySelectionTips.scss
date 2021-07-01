@@ -1,0 +1,48 @@
+@import './../../assets/css/variables.scss';
+
+.safety-selection-box{
+    display: flex;
+    .title-box{
+        display: inline-block;
+        padding: $gap/2;
+        border: $grayBorder;
+        width: 155px;
+        .circle-number{
+            display: inline-block;
+            text-align: center;
+            width: 16px;
+            height: 16px;
+            line-height: 14px;
+            font-size: $explainFontSize;
+            border: 1px solid rgba(51,51,51,1);
+            border-radius: 16px;
+            margin-right: 5px;
+        }
+    }
+    .arrow-right-wrapper{
+        padding: $gap/2 8px;
+        .arrow-right{
+            position: relative;
+            border-top: 2px solid #A4B0BB;
+            width: 60px;
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 0;
+                width: 0;
+                border-top: 4px solid transparent;
+                border-bottom: 4px solid transparent;
+                border-right: 4px solid transparent;
+                border-left: 4px solid #A4B0BB;
+                transform: translateX(100%) translateY(-57%);
+            }
+        }
+        .explainStyle{
+            display: inline-block;
+            width: 60px;
+            text-align: center;
+        }
+    }
+}

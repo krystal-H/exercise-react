@@ -1,0 +1,15 @@
+@import '../../assets/css/variables.scss';
+
+.treeStructureDisplay{
+    .annotation{
+        margin-top: $gap;
+    }
+
+    .ant-tree-title{
+        color: rgba(0,0,0,0.35);  
+    }
+
+    .treeTextColor{
+        color:$themeColor;
+    }
+}

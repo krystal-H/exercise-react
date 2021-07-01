@@ -1,0 +1,30 @@
+@import './../../../../assets/css/variables.scss';
+
+.method-list-wrapper {
+    .page-title {
+        padding: 16px 0 16px 32px;
+        background-color: $sectionBgColor;
+    }
+    .method-list-content-wrapper {
+        padding: 23px;
+        .method-list-content {
+            background-color: $sectionBgColor;
+            .content-title {
+                height: 56px;
+                line-height: 56px;
+                padding-left: $gap;
+                font-size: 16px;
+                color: rgba(0, 0, 0, 0.85);
+            }
+            .content {
+                padding: $gap / 2 $gap 0;
+            }
+        }
+    }
+}
+
+.dialog-delete {
+    .ant-modal-content {
+        width: 100%;
+    }
+}

@@ -1,0 +1,54 @@
+@import './../../../assets/css/variables.scss';
+
+.user-visit-box{
+    .page-content-header{
+        height: max-content;
+        background-color: $sectionBgColor;
+        padding: $gap * 2/3 $gap;
+        margin-bottom: $gap;
+        .page-name{
+            height:28px;
+            font-size: $titleFontSize;
+            font-family:PingFangSC-Medium;
+            font-weight:500;
+            color:rgba(0,0,0,0.85);
+            line-height:28px;
+        }
+        .input-wrapper{
+            width: 40%;
+        }
+    }
+    .title-content{
+        background-color: #fff;
+        padding: $gap;
+    }
+    .ant-divider{
+        margin: 0 4px;
+    }
+    table{
+        table-layout: fixed;
+        td{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+    .colordot:before{
+        content:" ";
+        display: inline-block;
+        margin:0 6px 2px 0;
+        width: 6px;
+        height: 6px;
+        border-radius: 100%;
+        background-color: #F04242;
+    }
+    .colordot{
+        display: inline-block;
+    }
+    .colordotred:before{
+        background-color: #F04242;
+    }
+    .colordotgreen:before{
+        background-color: #1AC41C;
+    }
+}

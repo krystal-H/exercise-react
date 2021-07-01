@@ -1,0 +1,111 @@
+@import '../../../../../../assets/css/variables.scss';
+
+.product-edit-service-wrapper{
+    margin: $gap;
+    
+    .services-list-area{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .service-item{
+            flex:1;
+            border-radius:$borderRadius;
+            background:rgba(249,249,249,1);
+            
+            &.active{
+                border: 1px solid $grayBorderColor;  
+                background:$sectionBgColor;
+                color:rgba(102,102,102,1);
+
+                &:hover{
+                    box-shadow:0px 0px 10px 0px rgba(47,120,255,0.7);
+                }
+
+                .item-content{
+                    h4{
+                        color:$activeBgColor;
+                    }
+                }
+
+            }
+
+            &:not(:last-child) {
+                margin-right: $gap * 2;
+            }
+
+            .item-content{
+                min-height: 200px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: $gap * 1.5 $gap 0 $gap;
+                padding-bottom: $gap;
+                border-bottom: 2px solid #D9D9D9;
+                font-size: $contentFontSize;
+
+                img{
+                    height: 58px;
+                    width: 68px;
+                }
+
+                h4{
+                    color:rgba(102,102,102,1);
+                    font-size: 18px;
+                    margin-top: $gap;
+                    font-weight: 600;
+                }
+
+                span{
+                    width: 80%;
+                    margin-top: $gap;
+                    line-height: 30px;
+                    min-height: 120px;
+                }
+
+                .detail{
+                    width: 80%;
+                    margin-top: $gap / 2;
+                    text-decoration: underline;
+                    text-underline-position: under;
+                    height: $gap;
+                }
+            }
+
+            .item-control{
+                text-align: center;
+                padding: $gap;
+
+                button{
+                    border-color: #40a9ff;
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+
+    .product-edit-service-wrapper {
+        .services-list-area {
+
+            .service-item {
+
+                .item-content{
+                    margin: $gap $gap 0 $gap;
+
+                    h4,span{
+                        margin-top: $gap / 2;
+                    }
+
+                    span {        
+                        line-height: 24px;
+                        min-height: 150px;
+                    }
+                } 
+            }
+        }
+    }
+
+}

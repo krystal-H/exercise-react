@@ -1,0 +1,30 @@
+$iconSize:100px;
+$borderRadius: 50%;
+
+.icon-wrapper{
+    width: $iconSize;
+    height: $iconSize;
+    background:rgba(247,249,250,1);
+    border-radius:$borderRadius;
+    border:1px solid rgba(233,233,233,1);
+    display: flex;
+
+    &.show-img{
+        border:none;
+    }
+
+    i,img{
+        margin: auto;
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+        border-radius:$borderRadius;
+    }
+
+    i{
+        font-size: 32px;
+    }
+}

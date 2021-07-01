@@ -1,0 +1,51 @@
+{
+    "code": 0,
+    "data": [
+        {
+            "serviceId": 31,
+            "productId": 9914,
+            "serviceName": "喂鱼去吧，旱鸭子",
+            "status": 1,
+            "createTime": 1569803201000,
+            "modifyTime": 1569803204000,
+            "timerServiceDetails": [
+                {
+                    "serviceId": 31,
+                    "detailId": 47,
+                    "property": "time",
+                    "propertyName": "时间",
+                    "functionDataType": 2,
+                    "length": 1,
+                    "javaType": "LONG",
+                    "propertyValueDesc": "0~255",
+                    "propertyValueType": "RANGE",
+                    "gap": 1,
+                    "mulriple": 1
+                }
+            ]
+        },
+        {
+            "serviceId": 32,
+            "productId": 9914,
+            "serviceName": "坚如磐石",
+            "status": 0,
+            "createTime": 1569803220000,
+            "modifyTime": 1569803220000,
+            "timerServiceDetails": [
+                {
+                    "serviceId": 32,
+                    "detailId": 48,
+                    "property": "FreezeTempSet",
+                    "propertyName": "冷冻室温度设定",
+                    "functionDataType": 3,
+                    "length": 1,
+                    "javaType": "LONG",
+                    "propertyValueDesc": "1-常规|2-速冷",
+                    "propertyValueType": "ENUM",
+                    "gap": 1,
+                    "mulriple": 1
+                }
+            ]
+        }
+    ]
+}

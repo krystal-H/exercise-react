@@ -1,0 +1,26 @@
+@import '../../../assets/css/variables.scss';
+@import '../../../assets/css/tools.scss';
+.text-wrapper{
+
+    height: 500px;
+    overflow-y: scroll;
+
+    @include self-scroll-bar;
+
+    h3{
+        font-weight: 600;
+    }
+
+    & > p{
+        text-indent: $gap * 2;
+    }
+
+    ul{
+        margin: $gap / 2 0 0 $gap * 2;
+
+        li{
+            text-indent: 0;
+            list-style: disc;
+        }
+    }
+}

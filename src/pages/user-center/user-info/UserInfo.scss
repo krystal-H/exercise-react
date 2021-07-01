@@ -1,0 +1,64 @@
+@import '../../../assets/css/variables.scss';
+
+.form-wrapper{
+    width: 50%;
+}
+
+.base-info{
+    .title{
+        color: $fontColor;
+    }
+    
+    .p-flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    
+        .flex-item{
+            width: 33%;
+            color: $subFontColor;
+        }
+    }
+    
+}
+
+.safe-setting{
+    padding: 0 $gap;
+
+    .setting-item{
+        padding: $gap / 2 0;
+        line-height: 40px;
+        &:not(:last-child) {
+            border-bottom: 1px dashed $grayBorderColor;
+        }
+    
+        .left-desc{
+            .title{
+                color: $fontColor;
+                font-size: 15px;
+                font-weight: 600;
+            }
+            .desc-content{
+                color: $subFontColor;
+                font-size: 13px;
+            }
+        }
+    
+        .setting-btn-wrapper{
+            width: 120px;
+            margin: auto;
+    
+            .btns{
+                text-align: right;
+                span{
+                    cursor: pointer;
+                }
+                span:not(:last-child){
+                    padding-right: $gap / 2;
+                    margin-right: $gap / 2;
+                    border-right: $grayBorder;
+                }
+            }
+        }
+    }
+}

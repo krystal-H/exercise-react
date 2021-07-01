@@ -1,0 +1,41 @@
+.loading_box {
+    position: absolute;
+    z-index: 9999;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+
+    .ball-spin-fade-loader {
+        margin: auto;
+        position: relative;
+        
+        & > div {
+            background-color: #096dd9;
+            width: 9px;
+            height: 9px;
+            border-radius: 100%;
+            margin: 2px;
+            animation-fill-mode: both;
+            position: absolute;
+            animation: ball-spin-fade-loader 1s calc(var(--index) * 0.12s) infinite linear;
+            top: calc(var(--top) * 1px);
+            left: calc(var(--left) * 1px);
+        }
+    }
+}
+
+@keyframes ball-spin-fade-loader {
+    50% {
+        opacity: 0.3;
+        -webkit-transform: scale(0.4);
+        transform: scale(0.4);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+

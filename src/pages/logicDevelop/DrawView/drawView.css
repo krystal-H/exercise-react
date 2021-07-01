@@ -1,0 +1,992 @@
+.draw-font {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.draw-fillAll {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.draw-red {
+  color: #f15533;
+}
+.draw-lf {
+  margin-left: 6px;
+}
+.draw-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+.draw-wrap input,
+.draw-wrap textarea,
+.draw-wrap select,
+.draw-wrap button {
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, simsun, sans-serif;
+}
+.draw-loading {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999999;
+  height: 100%;
+}
+.draw-loading.ant-spin-nested-loading > div > .ant-spin {
+  max-height: inherit;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.draw-top {
+  position: relative;
+  z-index: 109;
+  height: 52px;
+  line-height: 52px;
+  color: #333;
+  font-size: 16px;
+  background: #fff;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+}
+.draw-top > span {
+  padding-left: 12px;
+}
+.draw-tools {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-right: 12px;
+  width: 70%;
+  text-align: right;
+  white-space: nowrap;
+}
+.draw-tools > span {
+  line-height: normal;
+}
+.draw-tools .ant-divider-vertical {
+  height: 30px;
+  margin: 0 8px;
+}
+.draw-tools .ant-btn {
+  margin: 0 4px;
+  border: 0 none;
+  background-color: transparent;
+}
+.draw-tools .ant-btn:focus {
+  color: inherit;
+}
+.draw-tools .ant-btn.draw-rotate > i {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.draw-left {
+  position: absolute;
+  left: 0;
+  top: 52px;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  border-right: 1px solid #dedede;
+  background-color: #f7f7f7;
+}
+.draw-search {
+  padding: 13px 12px;
+}
+.draw-chooser {
+  flex: 1;
+  overflow-y: auto;
+}
+.draw-chooser .ant-collapse-item {
+  border: 0 none;
+}
+.draw-chooser .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  padding: 7px 0 7px 36px;
+  line-height: 14px;
+  font-size: 12px;
+  background-color: #f1f1f1;
+}
+.draw-chooser .ant-collapse-borderless > .ant-collapse-item > .ant-collapse-content > .ant-collapse-content-box {
+  padding: 0;
+}
+.draw-chooser-list {
+  padding: 8px 16px;
+}
+.draw-chooser-list .draw-nodeItem:hover {
+  outline: 0 none;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.draw-nodeItem {
+  position: relative;
+  width: 160px;
+  height: 32px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  margin: 12px 14px;
+  background: #fff;
+  cursor: move;
+}
+.draw-nodeItem.draw-readonly {
+  cursor: auto;
+}
+.draw-nodeItem.draw-readonly .draw-nodeItem-inner {
+  cursor: pointer;
+}
+.draw-nodeItem.draw-readonly .draw-entry,
+.draw-nodeItem.draw-readonly .draw-output {
+  cursor: auto;
+}
+.draw-nodeItem.draw-readonly .draw-entry.draw-forbid:hover::after,
+.draw-nodeItem.draw-readonly .draw-output.draw-forbid:hover::after {
+  border-color: #0070cc;
+  -webkit-box-shadow: 0 1px 2px #0070cc;
+  box-shadow: 0 1px 2px #0070cc;
+}
+.draw-nodeItem.draw-readonly.draw-nodeItem-fault.draw-nodeItem-selected,
+.draw-nodeItem.draw-readonly.draw-nodeItem-fault:hover {
+  outline: 1px solid #0070cc;
+  box-shadow: 0 1px 4px #bed9f0;
+  -webkit-box-shadow: 0 1px 4px #0070cc;
+}
+.draw-nodeItem.draw-nodeItem-selected,
+.draw-nodeItem:hover {
+  outline: 1px solid #0070cc;
+  box-shadow: 0 1px 4px #0070cc;
+  -webkit-box-shadow: 0 1px 4px #0070cc;
+}
+.draw-nodeItem.draw-nodeItem-fault.draw-nodeItem-selected,
+.draw-nodeItem.draw-nodeItem-fault:hover {
+  outline: 1px solid #f15533;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(241, 85, 51, 0.5);
+  box-shadow: 0 1px 4px 0 rgba(241, 85, 51, 0.5);
+}
+.draw-nodeItem.draw-nodeItem-move {
+  position: absolute;
+  width: 136px;
+  margin: 0;
+  cursor: auto;
+}
+.draw-nodeItem .draw-nodeItem-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 28px;
+  background-position: center center;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+}
+.draw-nodeItem .draw-nodeItem-icon.deviceEvent,
+.draw-nodeItem .draw-nodeItem-icon.httpEvent,
+.draw-nodeItem .draw-nodeItem-icon.mqttEvent {
+  background-color: #399dff;
+}
+.draw-nodeItem .draw-nodeItem-icon.conditionalJudgment,
+.draw-nodeItem .draw-nodeItem-icon.optionJudgment,
+.draw-nodeItem .draw-nodeItem-icon.calculat,
+.draw-nodeItem .draw-nodeItem-icon.nodeJsScript {
+  background-color: #7b73ff;
+}
+.draw-nodeItem .draw-nodeItem-icon.tripartieApi,
+.draw-nodeItem .draw-nodeItem-icon.officialAPI {
+  background-color: #517eaa;
+}
+.draw-nodeItem .draw-nodeItem-icon.httpResponse {
+  background-color: #00cae8;
+}
+.draw-nodeItem .draw-nodeItem-icon.mqttRelease,
+.draw-nodeItem .draw-nodeItem-icon.rocketMQRelease {
+  background-color: #ffa509;
+}
+.draw-nodeItem .draw-nodeItem-icon.mySql,
+.draw-nodeItem .draw-nodeItem-icon.keyValue,
+.draw-nodeItem .draw-nodeItem-icon.dataAnalysis,
+.draw-nodeItem .draw-nodeItem-icon.variableSet {
+  background-color: #0fc18a;
+}
+.draw-nodeItem .draw-nodeItem-icon.device {
+  background-color: #666666;
+  background-image: url(../../../assets/images/drawView/device.svg);
+}
+.draw-nodeItem .draw-nodeItem-icon.variableSet {
+  background-image: url(../../../assets/images/drawView/variableSet.svg);
+}
+.draw-nodeItem .draw-nodeItem-icon.dataAnalysis,
+.draw-nodeItem .draw-nodeItem-icon.nodeJsScript {
+  background-image: url(../../../assets/images/drawView/nodeJsScript.svg);
+}
+.draw-nodeItem .draw-nodeItem-icon.keyValue {
+  background-image: url(../../../assets/images/drawView/keyValue.svg);
+}
+.draw-nodeItem .draw-nodeItem-icon.mySql {
+  background-image: url(../../../assets/images/drawView/mySql.svg);
+}
+.draw-nodeItem .draw-nodeItem-icon.rocketMQRelease {
+  background-image: url(../../../assets/images/drawView/rocketMQRelease.svg);
+}
+.draw-nodeItem .draw-nodeItem-icon.httpResponse {
+  background-image: url(../../../assets/images/drawView/httpResponse.svg);
+}
+.draw-nodeItem .draw-nodeItem-icon.officialAPI {
+  background-image: url(../../../assets/images/drawView/officialAPI.svg);
+}
+.draw-nodeItem .draw-nodeItem-icon.tripartieApi {
+  background-image: url(../../../assets/images/drawView/tripartieApi.svg);
+}
+.draw-nodeItem .draw-nodeItem-icon.deviceEvent {
+  background-image: url(../../../assets/images/drawView/deviceEvent.svg);
+}
+.draw-nodeItem .draw-nodeItem-icon.httpEvent {
+  background-image: url(../../../assets/images/drawView/httpEvent.svg);
+}
+.draw-nodeItem .draw-nodeItem-icon.mqttEvent,
+.draw-nodeItem .draw-nodeItem-icon.mqttRelease {
+  background-image: url(../../../assets/images/drawView/mqttEvent.svg);
+}
+.draw-nodeItem .draw-nodeItem-icon.conditionalJudgment {
+  background-image: url(../../../assets/images/drawView/conditionalJudgment.svg);
+}
+.draw-nodeItem .draw-nodeItem-icon.optionJudgment {
+  background-image: url(../../../assets/images/drawView/optionJudgment.svg);
+}
+.draw-nodeItem .draw-nodeItem-icon.calculat {
+  background-image: url(../../../assets/images/drawView/calculat.svg);
+}
+.draw-nodeItem .draw-nodeItem-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 21;
+  cursor: move;
+}
+.draw-nodeItem .draw-output-wrap {
+  position: absolute;
+  top: 0;
+  right: -6px;
+  width: 100%;
+}
+.draw-nodeItem .draw-entry,
+.draw-nodeItem .draw-output {
+  position: absolute;
+  z-index: 25;
+  width: 13px;
+  height: 13px;
+  padding: 2px;
+  cursor: crosshair;
+}
+.draw-nodeItem .draw-entry::after,
+.draw-nodeItem .draw-output::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0.5px solid #666;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.draw-nodeItem .draw-entry:hover::after,
+.draw-nodeItem .draw-output:hover::after {
+  border-color: #0070cc;
+  -webkit-box-shadow: 0 1px 2px #0070cc;
+  box-shadow: 0 1px 2px #0070cc;
+}
+.draw-nodeItem .draw-entry.draw-forbid:hover::after,
+.draw-nodeItem .draw-output.draw-forbid:hover::after {
+  border-color: #f00;
+  -webkit-box-shadow: 0 1px 2px #f15533;
+  box-shadow: 0 1px 2px #f15533;
+}
+.draw-nodeItem .draw-entry {
+  left: -7px;
+  top: 50%;
+  margin-top: -6.5px;
+}
+.draw-nodeItem .draw-output {
+  right: 0;
+}
+.draw-nodeItem .draw-output.draw-output-0 {
+  top: 2.5px;
+}
+.draw-nodeItem .draw-output.draw-output-1 {
+  top: 20.5px;
+}
+.draw-nodeItem .draw-output.draw-output-2 {
+  top: 38.5px;
+}
+.draw-nodeItem .draw-output.draw-output-3 {
+  top: 56.5px;
+}
+.draw-nodeItem .draw-output.draw-output-4 {
+  top: 74.5px;
+}
+.draw-nodeItem .draw-output.draw-output-5 {
+  top: 92.5px;
+}
+.draw-nodeItem .draw-output.draw-output-6 {
+  top: 110.5px;
+}
+.draw-nodeItem .draw-output.draw-output-7 {
+  top: 128.5px;
+}
+.draw-nodeItem .draw-output.draw-output-8 {
+  top: 146.5px;
+}
+.draw-nodeItem .draw-output.draw-output-9 {
+  top: 164.5px;
+}
+.draw-nodeItem .draw-output-wrap.draw-output-wrap-only .draw-output.draw-output-0 {
+  top: 9.5px;
+}
+.draw-nodeItem .draw-nodeItem-text {
+  position: absolute;
+  left: 28px;
+  right: 10px;
+  top: 50%;
+  margin-top: -16px;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 8px;
+  padding-right: 14px;
+  font-size: 12px;
+  color: #333;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.draw-nodeItem .draw-nodeItem-error,
+.draw-nodeItem .draw-nodeItem-success {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #f15533;
+}
+.draw-nodeItem .draw-nodeItem-success {
+  color: #0070cc;
+}
+.draw-arrow {
+  position: absolute;
+  left: -9px;
+  top: 50%;
+  z-index: 12;
+  width: 12px;
+  height: 15px;
+  margin-top: -7.5px;
+  margin-left: -6px;
+}
+.draw-arrow .draw-arrow-inner {
+  position: absolute;
+  top: 1px;
+  left: 2.5px;
+  width: 0;
+  height: 0;
+  border: solid transparent;
+  border-width: 6.5px 7px;
+  border-left-color: #111;
+}
+.draw-arrow.draw-arrow-connect {
+  left: 0;
+  top: 0;
+}
+.draw-content {
+  position: absolute;
+  left: 220px;
+  top: 52px;
+  right: 420px;
+  bottom: 0;
+  z-index: 5;
+}
+.draw-content .draw-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  bottom: 30px;
+  background-color: #dfe2e5;
+  overflow: auto;
+  cursor: crosshair;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.draw-content .draw-inner .draw-list {
+  position: relative;
+  min-width: 100%;
+  z-index: 20;
+}
+.draw-content .draw-inner svg:not(:root) {
+  overflow: hidden;
+}
+.draw-content.draw-no-chooser {
+  left: 0;
+}
+.draw-content.draw-no-configuration {
+  right: 0;
+}
+.draw-content.draw-readonly {
+  top: 0;
+  left: 0;
+}
+.draw-content.draw-readonly .draw-inner {
+  bottom: 0;
+  cursor: auto;
+}
+.draw-ctx-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  padding: 0 32px;
+  border: 1px solid #e9e9e9;
+  background-color: #fff;
+  min-width: 270px;
+  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+}
+.draw-ctx-wrap .draw-ctx-group {
+  border-bottom: 2px solid #e9e9e9;
+}
+.draw-ctx-wrap .draw-ctx-group:last-child {
+  border-bottom: 0;
+}
+.draw-ctx-wrap .draw-ctx-group .draw-ctx-btn {
+  display: block;
+  height: 64px;
+  line-height: 32px;
+  padding: 16px 32px;
+  margin: 0 -32px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+.draw-ctx-wrap .draw-ctx-group .draw-ctx-btn .draw-ctx-add {
+  color: #cacaca;
+  margin-left: 10px;
+}
+.draw-ctx-wrap .draw-ctx-group .draw-ctx-btn:hover {
+  background-color: #f7f7f7;
+  color: #0070cc;
+}
+.draw-ctx-wrap .draw-ctx-group .draw-ctx-btn.draw-ctx-btn-disabled {
+  color: #cacaca;
+  background-color: transparent;
+  cursor: default;
+}
+.draw-right {
+  position: absolute;
+  right: 0;
+  top: 52px;
+  bottom: 0;
+  z-index: 108;
+  width: 420px;
+  font-size: 12px;
+  border-left: 1px solid #dedede;
+  background-color: #f7f7f7;
+  overflow-y: auto;
+}
+.draw-right.draw-readonly {
+  top: 0;
+}
+.draw-PD .draw-PD-head {
+  height: 60px;
+  -webkit-box-shadow: 0 1px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 1px rgba(0, 0, 0, 0.07);
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.draw-PD .draw-PD-body {
+  padding: 24px 20px;
+  font-size: 12px;
+  color: #888;
+}
+.draw-PD .draw-PD-body p {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.draw-PD .draw-PD-body .draw-PD-intro {
+  padding: 20px 0;
+}
+.draw-PD .draw-PD-body .draw-PD-intro .draw-PD-intro-item {
+  position: relative;
+  padding-left: 46px;
+  margin-bottom: 16px;
+}
+.draw-PD .draw-PD-body .draw-PD-intro .draw-PD-intro-item::after {
+  content: "";
+  position: absolute;
+  left: 17px;
+  top: 40px;
+  bottom: -5px;
+  width: 0;
+  border-left: 2px dashed #d1d1d1;
+}
+.draw-PD .draw-PD-body .draw-PD-intro .draw-PD-intro-item:last-child::after {
+  display: none;
+}
+.draw-PD .draw-PD-body .draw-PD-intro .draw-PD-intro-item > h5 {
+  margin-bottom: 4px;
+  color: #111;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.draw-PD .draw-PD-body .draw-PD-intro .draw-PD-intro-item .draw-PD-icon {
+  position: absolute;
+  left: 0;
+  top: -4px;
+  width: 36px;
+  height: 36px;
+  background: url("../../../assets/images/drawView/default.png") no-repeat;
+  background-size: 36px 144px;
+  background-position: 0 0;
+}
+.draw-PD .draw-PD-body .draw-PD-intro .draw-PD-intro-item .draw-PD-icon.draw-PD-icon-1 {
+  background-position: 0 0;
+}
+.draw-PD .draw-PD-body .draw-PD-intro .draw-PD-intro-item .draw-PD-icon.draw-PD-icon-2 {
+  background-position: 0 -36px;
+}
+.draw-PD .draw-PD-body .draw-PD-intro .draw-PD-intro-item .draw-PD-icon.draw-PD-icon-3 {
+  background-position: 0 -72px;
+}
+.draw-PD .draw-PD-body .draw-PD-intro .draw-PD-intro-item .draw-PD-icon.draw-PD-icon-4 {
+  background-position: 0 -108px;
+}
+.draw-config-inner,
+.draw-small-form {
+  padding: 18px 24px;
+  font-size: 12px;
+}
+.draw-config-inner.ant-modal-wrap,
+.draw-small-form.ant-modal-wrap {
+  padding: 0;
+}
+.draw-config-inner .ant-tabs-nav .ant-tabs-tab,
+.draw-small-form .ant-tabs-nav .ant-tabs-tab {
+  margin: 0;
+  font-size: 12px;
+  padding: 4px 12px;
+}
+.draw-config-inner .ant-tabs-bar,
+.draw-small-form .ant-tabs-bar {
+  margin-bottom: 24px;
+}
+.draw-config-inner .CodeMirror,
+.draw-small-form .CodeMirror,
+.draw-config-inner .ant-tabs,
+.draw-small-form .ant-tabs,
+.draw-config-inner .ant-btn,
+.draw-small-form .ant-btn,
+.draw-config-inner .ant-input,
+.draw-small-form .ant-input,
+.draw-config-inner .ant-select,
+.draw-small-form .ant-select,
+.draw-config-inner .ant-form label,
+.draw-small-form .ant-form label,
+.draw-config-inner .ant-form-explain,
+.draw-small-form .ant-form-explain,
+.draw-config-inner .ant-form-extra,
+.draw-small-form .ant-form-extra,
+.draw-config-inner .ant-collapse,
+.draw-small-form .ant-collapse,
+.draw-config-inner .ant-table,
+.draw-small-form .ant-table {
+  font-size: 12px;
+}
+.draw-config-inner .CodeMirror,
+.draw-small-form .CodeMirror {
+  font-family: Monaco, Menlo, "Ubuntu Mono", Consolas, source-code-pro, monospace;
+}
+.draw-config-inner .ant-form-vertical .ant-form-item-label,
+.draw-small-form .ant-form-vertical .ant-form-item-label,
+.draw-config-inner .ant-col-24.ant-form-item-label,
+.draw-small-form .ant-col-24.ant-form-item-label,
+.draw-config-inner .ant-col-xl-24.ant-form-item-label,
+.draw-small-form .ant-col-xl-24.ant-form-item-label {
+  line-height: 20px;
+  padding-bottom: 4px;
+}
+.draw-config-inner .ant-form-item,
+.draw-small-form .ant-form-item {
+  padding-bottom: 0;
+  margin-bottom: 8px;
+}
+.draw-config-inner .ant-form-item label > .anticon,
+.draw-small-form .ant-form-item label > .anticon {
+  margin-left: 6px;
+  vertical-align: middle;
+  margin-top: -3px;
+}
+.draw-config-inner .ant-collapse,
+.draw-small-form .ant-collapse {
+  border: 0 none;
+  background-color: transparent;
+}
+.draw-config-inner .ant-collapse > .ant-collapse-item,
+.draw-small-form .ant-collapse > .ant-collapse-item {
+  border-bottom: 0 none;
+}
+.draw-config-inner .ant-collapse > .ant-collapse-item > .ant-collapse-header,
+.draw-small-form .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  padding: 8px 0 8px 36px;
+  line-height: 12px;
+}
+.draw-config-inner .ant-collapse .ant-collapse-content,
+.draw-small-form .ant-collapse .ant-collapse-content {
+  border-top-color: #ebebeb;
+}
+.draw-config-inner .ant-collapse .ant-collapse-content > .ant-collapse-content-box,
+.draw-small-form .ant-collapse .ant-collapse-content > .ant-collapse-content-box {
+  padding: 0;
+}
+.draw-config-inner .ant-table-small,
+.draw-small-form .ant-table-small {
+  border: 0 none;
+}
+.draw-config-inner .ant-table-small th,
+.draw-small-form .ant-table-small th {
+  font-weight: bold;
+}
+.draw-config-inner .ant-table-small .ant-btn-link,
+.draw-small-form .ant-table-small .ant-btn-link {
+  height: auto;
+}
+.draw-config-inner .ant-btn-link,
+.draw-small-form .ant-btn-link {
+  padding: 0;
+  color: #1890ff;
+}
+.draw-config-inner .ant-btn-link:hover,
+.draw-small-form .ant-btn-link:hover {
+  color: #40a9ff;
+}
+.draw-group {
+  position: relative;
+  width: 100%;
+  color: #888;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  font-size: 12px;
+}
+.draw-group .draw-group-inner {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding-right: 8px;
+  background-color: #f7f7f7;
+}
+.draw-group::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 1;
+  margin-top: -0.5px;
+  width: 100%;
+  border-top: 1px solid rgba(151, 151, 151, 0.2);
+}
+/* 覆盖替换弹出层的样式 */
+.draw-popover {
+  max-width: 420px;
+}
+.draw-popover .ant-popover-inner-content {
+  padding: 6px 16px;
+  font-size: 12px;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.draw-no-popover .ant-popover {
+  display: none;
+}
+/* 各配置 */
+.draw-mt-4 {
+  margin-top: 4px;
+}
+.draw-del {
+  position: relative;
+  width: 100%;
+  height: 0;
+}
+.draw-del .anticon,
+.draw-del .draw-del-group,
+.draw-del a {
+  position: absolute;
+  top: -12px;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  font-size: 12px;
+  cursor: pointer;
+}
+.draw-del .draw-del-group .ant-btn-link {
+  height: 20px;
+  margin-left: 5px;
+}
+.draw-del.disabled .anticon,
+.draw-del.disabled a {
+  color: #c1c1c1;
+}
+.draw-count {
+  margin-top: -4px;
+  font-size: 12px;
+}
+.draw-confirm {
+  margin-left: 13px;
+  margin-top: 5px;
+}
+.draw-link {
+  height: 20px;
+}
+.draw-topic {
+  padding-bottom: 1px;
+  font-size: 12px;
+  color: #111;
+}
+.draw-topic .draw-topic-item {
+  position: relative;
+  height: 32px;
+  line-height: 32px;
+  margin-bottom: 8px;
+  padding: 0 100px 0 8px;
+  background-color: #ededee;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.draw-topic .draw-topic-item .draw-topic-right {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.draw-topic .draw-topic-item .draw-topic-right .anticon {
+  margin-left: 8px;
+  cursor: pointer;
+}
+.draw-line {
+  padding-top: 8px;
+  font-size: 12px;
+}
+.draw-row {
+  padding: 8px 0;
+  font-size: 12px;
+}
+.draw-menu-group {
+  display: flex;
+  color: #555;
+}
+.draw-menu-group .draw-menu {
+  position: relative;
+  flex: 1;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 16px;
+  margin-right: 8px;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid #a8a8a8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.draw-menu-group .draw-menu:last-child {
+  margin-right: 0;
+}
+.draw-menu-group .draw-menu.draw-menu-selected {
+  color: #0070cc;
+  border-color: #0070cc;
+}
+.draw-menu-group .draw-menu.draw-menu-selected::before {
+  content: "";
+  position: absolute;
+  right: -18px;
+  bottom: -18px;
+  width: 36px;
+  height: 36px;
+  -webkit-font-smoothing: antialiased;
+  background-color: #0070cc;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.draw-menu-group .draw-menu.draw-menu-selected::after {
+  content: "√";
+  position: absolute;
+  font-size: 20px;
+  line-height: 16px;
+  right: 0;
+  bottom: 0;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transform: scale(0.6);
+  transform: scale(0.6);
+  color: #fff;
+}
+.draw-menu-group .draw-menu.draw-menu-disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+.draw-logic {
+  position: relative;
+  margin-bottom: 8px;
+}
+.draw-logic::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 50%;
+  border-top: 1px solid #a8a8a8;
+}
+.draw-logic .draw-logic-inner {
+  position: relative;
+  width: 120px;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+}
+.draw-logic .draw-logic-inner .draw-logic-content {
+  width: 100px;
+  margin: 0 auto;
+}
+.draw-params {
+  max-height: 448px;
+  overflow: auto;
+}
+.draw-params .ant-form-item-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.draw-debug .draw-debug-error {
+  color: red;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.draw-toolBox {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  height: 30px;
+  background-color: #f7f7f7;
+}
+.draw-toolBox .draw-toolBox-group {
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 2.5;
+}
+.draw-toolBox .draw-toolBox-group .ant-btn {
+  padding: 0;
+  margin-right: 16px;
+  height: 16px;
+}
+.draw-toolBox .draw-toolBox-resize {
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  z-index: 12;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: ns-resize;
+}
+.draw-log {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 0;
+  margin-top: 30px;
+  height: 196px;
+  background-color: #f7f7f7;
+}
+.draw-log::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0;
+  border-top: 1px solid #dedede;
+}
+.draw-log .ant-tabs-nav {
+  height: 42px;
+}
+.draw-log .ant-tabs-nav .ant-tabs-tab {
+  margin: 0;
+  font-size: 12px;
+  line-height: 34px;
+  padding: 4px 12px;
+}
+.draw-log .ant-tabs-bar {
+  margin-bottom: 0;
+  height: 42px;
+  border-bottom-color: #dedede;
+}
+.draw-log .ant-tabs {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+.draw-log .ant-tabs-content {
+  overflow: auto;
+  flex: 1;
+}
+.draw-log .ant-tabs-extra-content {
+  line-height: 48px;
+}
+.draw-log .ant-tabs-extra-content .ant-btn {
+  padding: 0;
+  margin-right: 16px;
+  height: 16px;
+}
+.draw-table-small .ant-table-thead > tr > th {
+  padding: 8px;
+}
+.draw-table-small .ant-table-tbody > tr > td {
+  padding: 4px 8px;
+}
+.draw-table-small .ant-table-thead > tr > th .ant-table-header-column {
+  display: block;
+}
+.draw-table-small .ant-table-thead > tr > th .ant-table-header-column div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

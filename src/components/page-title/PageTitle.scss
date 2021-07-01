@@ -1,0 +1,35 @@
+@import '../../assets/css/variables.scss';
+
+// 页面标题样式
+.page-title{
+    padding: $gap / 2  $gap;
+    background-color: $sectionBgColor;
+    position: relative;
+
+    span{
+        vertical-align: middle;
+    }
+
+    .back{
+        font-size: 16px;
+        cursor: pointer;
+        padding-right: $gap * 2 / 3;
+        border-right: 2px solid rgba(235,235,235,1);
+        margin-right:  $gap * 2 / 3;
+
+        &:hover{
+            color: rgba(24,144,255,1);
+        }
+    }
+
+    .title{
+        font-size:$titleFontSize;
+        font-weight:600;
+        color:rgba(0,0,0,0.85);
+    }
+
+    .op-areas{
+        float: right;
+        margin-right: $gap;
+    }
+}

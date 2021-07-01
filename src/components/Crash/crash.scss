@@ -1,0 +1,11 @@
+.lcp-null-wrap {
+    position: relative;
+    height: 340px;
+    .lcp-null-inner {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        transform: translate(0, -50%);
+    }
+}

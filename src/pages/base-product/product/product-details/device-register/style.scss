@@ -1,0 +1,85 @@
+@import './../../../../../assets/css/variables.scss';
+
+.device-register-wrapper {
+    height: 100%;
+    min-height: 520px;
+    font-family: PingFangSC-Medium, PingFang SC sans-serif;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    padding: $gap;
+    background-color: #e9e9e9;
+
+    .device-statistic {
+        height: 100px;
+        padding: 20px;
+        background: #fff;
+        .total, .register, .unregistered {
+            padding-left: 5px;
+            float: left;
+            width: 33%;
+            border-right: 1px solid #E8E8E8;
+            span:first-child {
+                font-size: 20px;
+            }
+            span:last-child {
+                flex: 2;
+                font-size: 30px;
+                font-weight: 600;
+            }
+        }
+        .unregistered {
+            border-right: none;
+        }
+    }
+    .device-register-content-wrapper {
+        padding: 24px;
+        background: #fff;
+        .content-list-wrapper {
+            h4 {
+                margin: 20px 0;
+                font-weight: 600;
+            }
+            .content-list {
+                .content-list-top {
+                    margin-bottom: 6px;
+                    .search-form {
+                        float: left;
+                    }
+                    .register-btn {
+                        float: right;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.register-device-modal {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC sans-serif;
+    font-weight: 400;
+    .register-device-form-wrapper {
+        .tips {
+            padding: 20px;
+            background-color: #e6f7ff;
+        }
+        .register-file {
+            padding: 40px 0 40px 40px;
+            .address::before {
+                display: inline-block;
+                margin-right: 4px;
+                color: #f5222d;
+                font-size: 14px;
+                font-family: SimSun, sans-serif;
+                line-height: 1;
+                content: '*';
+            }
+            .upload-tips {
+                display: block;
+                margin-top: 10px;
+            }
+        }
+    }
+}

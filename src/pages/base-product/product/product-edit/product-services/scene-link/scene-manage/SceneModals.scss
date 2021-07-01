@@ -1,0 +1,77 @@
+.approver-item{
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(233, 233, 233, 1);
+
+    .approver-content{
+        margin-top: 12px;
+
+        .content-configs{
+            text-align: justify;
+            .issues-wrapper,.rejects-wrapper{
+                display: inline-block;
+                width: 49%;
+                vertical-align: top;
+            }
+        }
+    }
+}
+
+.my-table{
+    width: 100%;
+    tr {
+        line-height: 3;          
+        font-size: 12px;
+
+        th,td{
+            padding-left: 8px;
+            width: 15%;
+        }
+
+        th:nth-child(1),td:nth-child(1) {
+            width: 40%;
+        }
+        th:nth-child(3),td:nth-child(3) {
+            width: 26%;
+        }
+
+    }
+    thead{
+        background:rgba(250,250,250,1);
+        tr {
+            font-size: 15px;
+        }
+    }
+}
+.link-protocol-wrapper{
+    .link-protocol-item{
+        position: relative;
+        background:rgba(255,255,255,1);
+        border-radius:6px;
+        border:1px solid rgba(0,0,0,0.15);
+        padding: 0 12px !important;
+        margin: 0 24px 12px 0;
+    
+        > span{
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.14);
+            color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+    
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.5);
+                top: -9px;
+            }
+        }
+    }
+
+    .link-protocols{
+        
+    }
+}

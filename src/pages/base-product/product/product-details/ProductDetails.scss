@@ -1,0 +1,11 @@
+@import '../../../../assets/css/variables.scss';
+
+.eidt-wrapper{
+    .edit-content-wrapper{
+        padding: $gap;
+
+        &.no-padding{
+            padding: 0;
+        }
+    }
+}

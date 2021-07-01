@@ -1,0 +1,978 @@
+@import '../../../../../assets/css/variables.scss';
+
+//设备调试 相关css
+$borderColor: #e8e8e8;
+
+/*右边内容标题*/
+.comm-secondtitle{
+	height: 68px;
+	line-height: 68px;
+	color: #435465;
+    font-size: 18px;
+    padding-left:28px;
+	padding-right:28px;
+	background-color: #fff;
+	.comm-rightbtn{
+		min-width: 68px;
+		float: right;
+		line-height: normal;
+		text-align: center;
+		margin-top: 17px;
+	}
+}
+
+/*一般列表或主要内容模块外框*/
+.comm-bordertopbox{
+    padding: 28px;
+    border-top:10px solid #f0f3f6;
+}
+
+.dev-test-content {
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid $borderColor;
+
+    input[type='reset'],
+    input[type='button'] {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -o-appearance: none;
+        border: 1px solid #d3d4d6;
+        height: 26px;
+        overflow: hidden;
+        padding: 4px 12px;
+        border-radius: $borderRadius;
+        background: #fff;
+        font-size: 14px;
+        margin: 2px 0 2px 15px;
+        &:hover {
+            color: #333;
+            background-color: #e6e6e6;
+            border-color: #adadad;
+        }
+        &:active {
+            border-color: #00a0e9;
+        }
+    }
+}
+.dev-test-header {
+    position: relative;
+    background: #f4f5f9;
+    height: 45px;
+    .dev-test-header-right {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .dev-test-item {
+        float: left;
+        height: 45px;
+        line-height: 45px;
+        padding: 0 20px;
+    }
+    .linkState{
+        padding: 8px $gap;
+        border: 1px solid #C2E0AD;
+        border-radius: $borderRadius;
+        background-color: #F6FFEC;
+    }
+    .linkError{
+        color: $warnColor;
+        border-color: $warnColor;
+    }
+}
+.dev-test-tab {
+    float: left;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    .dev-test-tab-item {
+        float: left;
+        text-align: center;
+        color: #414141;
+        padding: 0 15px;
+        margin-right: 8px;
+        cursor: pointer;
+        &.active {
+            background: #65a6e7;
+            color: #fff;
+        }
+    }
+}
+
+.dev-test-statu {
+    color: #3a7ff5;
+    font-size: 14px;
+    &.error {
+        color: #ff0000;
+    }
+}
+.dev-test-command {
+    position: relative;
+    width: 20px;
+    background: url('../../../../../assets/images/btn_command.png') no-repeat;
+    background-position: center;
+    cursor: pointer;
+    .command-select {
+        position: absolute;
+        z-index: 21;
+        border: 1px solid $borderColor;
+        box-shadow: 2px 2px 2px #dedede;
+        width: 280px;
+        height: 255px;
+        overflow: auto;
+        background: #ffffff;
+        top: 100%;
+        right: 0;
+        ul{
+            padding-left: 10px;
+            list-style: none;
+        }
+        ul li {
+            height: 35px;
+            line-height: 35px;
+            font-size: 14px;
+            color: #414141;
+            padding: 0 10px;
+            &:nth-of-type(2n) {
+                background: #f8f8f8;
+            }
+            &:hover {
+                background: #65a6e7;
+                color: #fff;
+            }
+            span {
+                //两个文本
+                vertical-align: middle;
+            }
+            span.txt {
+                //文本过长部分隐藏
+                display: inline-block;
+                width: 160px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+.dev-test-receive {
+    font-size: 14px;
+    color: #414141;
+    input {
+        vertical-align: middle;
+        margin-right: 5px;
+        margin-top: -3px;
+    }
+}
+.dev-test-filter-panel {
+    margin-top: 50px;
+    padding: 20px;
+    overflow: hidden;
+    border-bottom: 1px solid $borderColor;
+    form {
+        display: inline-block;
+    }
+    label {
+        font-size: 14px;
+        color: #999ba0;
+        &.by-checkbox {
+            color: #252a33;
+        }
+    }
+    input[type='text'] {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -o-appearance: none;
+        border: 1px solid #d3d4d6;
+        width: 140px;
+        height: 26px;
+        overflow: hidden;
+        padding-left: 10px;
+        margin-left: 12px;
+        font-size: 14px;
+    }
+    select {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -o-appearance: none;
+        border: 1px solid #d3d4d6;
+        background: url('../../../../../assets/images/selectdown.png') no-repeat center right;
+        width: 140px;
+        height: 26px;
+        overflow: hidden;
+        padding-left: 10px;
+        margin-left: 12px;
+        font-size: 14px;
+    }
+    input[type='checkbox'] {
+        vertical-align: middle;
+        margin-right: 5px;
+        margin-top: -3px;
+    }
+    .filterBox{
+        position: relative;
+        margin-top: $gap/2;
+    }
+    .has-next {
+        margin-right: 20px !important;
+    }
+    .sclt-cont {
+        padding-right: 20px;
+    }
+    .has-next.firm-up {
+        //固件升级筛选 长度调整
+        width: 180px;
+    }
+    .export-excel-btn {
+        position: absolute;
+        right: 0;
+        width: 100px;
+        height: 32px;
+        line-height: 32px;
+        background: url(../../../../../assets/images/deviceDebugUpData.png) no-repeat 20px center;
+        text-indent: 40px;
+        color: $themeColor;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 1460px) {
+    .dev-test-filter-panel .export-excel-btn {
+        float: none;
+    }
+}
+.data-debug-page {
+    position: relative;
+    .dev-test-data-wrap {
+        position: relative;
+    }
+    .left-wrap {
+        margin-right: 33%;
+        .dev-test-common-panel:last-of-type {
+            border-bottom: 0;
+        }
+    }
+    .right-wrap {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 33%;
+        border-left: 1px solid $borderColor;
+        .dev-test-table table tbody {
+            height: 840px;
+        }
+    }
+    .json-format-panel {
+        padding: 10px;
+        height: 820px;
+        overflow: auto;
+        .editJsonPanel {
+            width: 100%;
+            height: 100%;
+            textarea {
+                width: 100%;
+                height: 100%;
+                font-size: 14px;
+                border: 1px solid $borderColor;
+                background: #f5f5f5;
+            }
+        }
+    }
+}
+.equipment-upgrade-page {
+    position: relative;
+    .dev-test-data-wrap {
+        position: relative;
+    }
+    .left-wrap {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        width: 30%;
+        .device-list {
+            float: left;
+            height: 920px;
+            width: 60%;
+            overflow: auto;
+            .dev-test-table table tbody {
+                height: 100%;
+            }
+        }
+        .device_upgrade_opera {
+            float: left;
+            height: 920px;
+            border-left: 1px solid #e8e8e8;
+            width: 39.6%;
+            // padding: 0 2%;
+            // text-align: center;
+            p {
+                text-align: center;
+                // margin: 0 auto;
+                width: 100%;
+            }
+            .line {
+                border-top: 1px solid $borderColor;
+                margin-top: 12px;
+            }
+            input[type='button'] {
+                width: 110px;
+                margin: 12px auto 0 auto;
+            }
+        }
+    }
+    .right-wrap {
+        border-left: 1px solid $borderColor;
+        margin-left: 30%;
+        .dev-test-common-panel:last-of-type {
+            border-bottom: 0;
+        }
+    }
+}
+.dev-test-common-panel {
+    border-bottom: 1px solid $borderColor;
+    .common-panel-title {
+        border-bottom: 1px solid $borderColor;
+        height: 38px;
+        line-height: 38px;
+        font-size: 14px;
+        color: #414141;
+        padding: 0 15px;
+    }
+    .common-panel-content {
+        &:after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+    }
+    &:after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+}
+
+.dev-test-table {
+    table {
+        font-size: 14px;
+        width: 100%;
+        thead {
+            background: #f4f5f9;
+            tr {
+                background: #f4f5f9;
+                height: 35px;
+                td {
+                    position: relative;
+                    color: #999ba0;
+                    text-align: center;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        background: $borderColor;
+                        height: 12px;
+                        right: 0;
+                        top: 11px;
+                    }
+                }
+            }
+        }
+        tbody {
+            height: 525px;
+            overflow: auto;
+            tr {
+                &.odd {
+                    background: #f8f8f8;
+                }
+                &.active {
+                    background: #00a0e9 !important;
+                    td {
+                        color: #fff !important;
+                    }
+                }
+                cursor: pointer;
+                background: #fff;
+                height: 35px;
+                width: 100%;
+                td {
+                    text-align: center;
+                    color: #414141;
+                    border-right: 1px solid $borderColor;
+                    &:last-of-type {
+                        border-right: 0;
+                    }
+                }
+            }
+        }
+
+        &.fixed-head {
+            position: relative;
+            width: 100%;
+            thead {
+                display: table;
+                table-layout: fixed;
+                width: 100%;
+                tr {
+                    display: table;
+                    table-layout: fixed;
+                    width: 100%;
+                    width: -moz-calc(100% - 1em);
+                    width: -webkit-calc(100% - 1em);
+                    width: -o-calc(100% - 1em);
+                    width: calc(100% - 1em);
+                }
+            }
+            tbody {
+                display: block;
+                position: relative;
+                overflow-y: scroll;
+                width: 100%;
+                tr {
+                    display: table;
+                    table-layout: fixed;
+                }
+            }
+        }
+    }
+}
+
+.data-area {
+    height: 80px;
+    position: relative;
+    .data-input {
+        padding: 5px 15px;
+        height: 70px;
+        font-size: 14px;
+        margin-right: 110px;
+        overflow-y: auto;
+        p {
+            line-height: 20px;
+        }
+    }
+    .data-opera {
+        position: absolute;
+        display: table;
+        text-align: center;
+        height: 100%;
+        width: 110px;
+        top: 0;
+        right: 0;
+        border-left: 1px solid $borderColor;
+        .inner {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+    }
+}
+
+.send-command-area {
+    display: table;
+    text-align: center;
+    height: 75px;
+    width: 100%;
+    .inner {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+.commandsDebugSytle{
+    .modal-body {
+        position: relative;
+        padding: 15px;
+        .form-group {
+            &:after {
+                content: '';
+                clear: both;
+                display: block;
+            }
+            min-height: 35px;
+            line-height: 35px;
+            margin-bottom: 15px;
+            // text-align: center;
+            label {
+                display: inline-block;
+                vertical-align: middle;
+                text-align: right;
+                width: 120px;
+                text-align: right;
+                font-size: 14px;
+                line-height: 15px;
+            }
+            .form-group-input-out {
+                display: inline-block;
+                vertical-align: middle;
+                width: 240px;
+                margin-top: 4px;
+                margin-left: 15px;
+                input {
+                    font-size: 14px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    height: 25px;
+                    line-height: 25px;
+                    width: 100%;
+                }
+                textarea {
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    height: 75px;
+                    line-height: 25px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .modal-footer {
+        height: 50px;
+        line-height: 50px;
+        text-align: right;
+        .cancel{
+            margin-left: $gap;
+        }
+    }
+}
+
+.exception-text {
+    color: red;
+}
+
+#copyInput {
+    height: 1px;
+    width: 1px;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.add_data_table_scroll {
+    .common-panel-content {
+        height: 563px;
+        overflow: auto;
+    }
+}
+
+.json-format-node {
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1.5;
+    i {
+        display: inline-block;
+        width: 15px;
+        text-align: center;
+        line-height: 15px;
+        &:before {
+            vertical-align: middle;
+            text-align: center;
+            cursor: pointer;
+            font-size: 10px;
+            color: #555;
+        }
+    }
+    .json-format-key {
+        color: #92278f;
+        font-weight: bold;
+    }
+    .json-format-value {
+        font-weight: bold;
+        &.number {
+            color: #3ab54a;
+        }
+        &.string {
+            color: #25aae2;
+        }
+        &.tag {
+            font-weight: 100;
+        }
+        &.null {
+            color: #f1592a;
+        }
+    }
+}
+
+//弹窗
+.debuggingInformation{
+    .debuggingInfo_box{
+        width: 752px;
+        .title{
+            padding: $gap/2 0 ;
+            font-weight: 700;
+        }
+        .add{
+            margin: $gap/2 0;
+            border: 1px dashed #ddd;
+            padding: 3px 0;
+            border-radius: 3px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 14px;
+            color: $themeColor;
+            border-color: $themeColor;
+        }
+        .add:hover{
+            // color: $themeColor;
+            // border-color: $themeColor;
+        }
+        .instructions{
+            font-size: $explainFontSize;
+            padding: 12px 50px 12px 12px;
+        }
+        .macListBox{
+            border-bottom: $grayBorder;
+            padding-bottom: $gap/2;
+            .macItem{
+                display: inline-block;
+                // width: 240px;
+                padding: 10px 0 10px 10px;
+                input{
+                    width: 150px;
+                }
+                .operationBut{
+                    margin-left: 10px;
+                }
+                span{
+                    display: inline-block;
+                    color: $themeColor;
+                    cursor: pointer;
+                }
+                .ant-divider-vertical{
+                    margin: 0 5px;
+                }
+                .macOrImei{
+                    position: relative;
+                    padding: $gap/6 $gap/2;
+                    display: inline-block;
+                    width: 365px;
+                    border: $grayBorder;
+                    border-radius: $borderRadius;
+                    p{
+                        margin-bottom: $gap/6;
+                        padding-right: $gap * 2;
+                        display: flex;
+                        flex-direction: row;
+
+                        .lable{
+                            width: max-content;
+                        }
+
+                        .details {
+                            flex: 1;
+                        }
+
+                    }
+                    .details,.lable{
+                        color: $subFontColor;
+                    }
+                    .lable{
+                        width: 70px;
+                        text-align: left;
+                    }
+                    .delete{
+                        position: absolute;
+                        top: 4px;
+                        right: 12px;
+                    }
+                }
+            }
+            .addDom{
+                width: 240px;
+            }
+        }
+        .accountAdd{
+            margin-top: $gap;
+            padding: 3px 0;
+            border: 1px dashed #ddd;
+            border-radius: 3px;
+            text-align: center;
+            cursor: pointer;
+            color: $themeColor;
+            border-color: $themeColor;
+            span{
+                padding-left: 10px;
+            }
+        }
+        .accountAdd:hover{
+            // color: $themeColor;
+            // border-color: $themeColor;
+        }
+        .accountAddDom{
+            .accountBox{
+                height: 54px;
+                border-bottom: 1px solid #e8e8e8;
+                line-height: 54px;
+                input{
+                    width: 180px;
+                    margin-right: 20px;
+                }
+                .save{
+                    padding-left: 10px;
+                }
+                span{
+                    color: $themeColor;
+                    cursor: pointer;
+                }
+                .saveTime{
+                    display: inline-block;
+                    margin: 0 51px 0 25px;
+                }
+            }
+        }
+
+        table.table {
+            table-layout: fixed;
+            width: 100%;
+            border-spacing: 0;  
+            a{
+                color: $themeColor;
+            }
+        }
+        table.table tr {
+            border-bottom: 1px solid $borderColor;
+        }
+        table.table td, table.table th{
+            padding: 10px ;
+            text-align: left;
+            border-bottom: 1px solid $borderColor;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            .save{
+                color: $themeColor;
+                cursor: pointer;
+            }
+            .accountBox{
+                input{
+                    width: 180px;
+                    margin-right: 20px;
+                }
+                span{
+                    color: $themeColor;
+                    cursor: pointer;
+                }
+                .saveTime{
+                    display: inline-block;
+                    margin: 0 51px 0 25px;
+                }
+            }
+        }
+        table.table th{
+            background-color: #f0f3f6;
+        }
+        table.table tr td:last-child, table.table tr th:last-child{ border-right: 0 }
+        table.table tr:last-child td, table.table tr:last-child th{ border-bottom: 0 }
+        
+    }
+}
+//
+.upgradeDialog{
+    .ant-modal-body{
+        padding:24px;
+    }
+}
+
+//设备调试
+.deviceDebugging{
+    padding: $gap;
+    background-color:#fff;
+    .title{
+        .titleName, .titleOperation{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .titleName{
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .titleOperation{
+            img{
+                width: 24px;
+                height: 24px;
+                margin: 0 10px 0 30px;
+            }
+            span{
+                vertical-align: middle;
+                color: $themeColor;
+            }
+        }
+    }
+    .content{
+        margin-top: 10px;
+        position: relative;
+        .message, .setUp{
+            display: inline-block;
+            position: absolute;
+        }
+        .message{
+            right: 100px;
+        }
+        .setUp{
+            right: 40px;
+        }
+        .tabs_1, .tabs_2{
+            .linkState{
+                padding: 8px $gap;
+                border: 1px solid #C2E0AD;
+                border-radius: $borderRadius;
+                background-color: #F6FFEC;
+            }
+            .drop_down_box{
+                position: relative;
+                padding: $gap 0;
+                .dropDown{
+                    display: inline-block;
+                    margin-right: 30px;
+                    .dropDown_name{
+                        padding-right: 10px;
+                    }
+                }
+            }
+            .resetFilterBox{
+                .reset, .filter, .empty{
+                    display: inline-block;
+                    margin-right: 30px;
+                }
+                .reset, .empty{
+                    padding: 5px 18px;
+                    border:1px solid $borderColor;
+                    border-radius: $borderRadius;
+                    cursor: pointer;
+                }
+                .reset:hover, .empty:hover{
+                    background-color: $borderColor;
+                }
+            }
+            .messageData, .plaintextData, .errorData{
+                height: 249px;
+            }
+            .messageList{
+                height: 352px;
+            }
+            .messageList,.messageData, .plaintextData, .errorData{
+                border-bottom: 1px solid $borderColor;
+                .msgTitle{
+                    position: relative;
+                    padding: 15px;
+                    span{
+                        font-size: $subTitleFontSize;
+                        font-weight: 700;
+                    }
+                    .butCopy, .butDelete{
+                        display: inline-block;
+                        position: absolute;
+                        padding: 5px 12px;
+                        border: 1px solid $borderColor;
+                        border-radius: $borderRadius;
+                    }
+                    .butCopy{
+                        right: 10px;
+                    }
+                    .butDelete{
+                        right: 80px;
+                    }
+                }
+                .msgListBox, .msgParseList{
+                    display: inline-block;
+                    height: 100%;
+                }
+                .msgListBox{
+                    width: 60%;
+                    border-right: 1px solid $borderColor;
+                }
+                .msgParseList{
+                    width: 40%;
+                }
+            }
+        }
+        .tabs_1{
+            .export{
+                position: absolute;
+                right: 0;
+                top: 26px;
+                color: $themeColor;
+                cursor: pointer;
+                img{
+                    height: 16px;
+                    width: 16px;
+                    margin-right: 8px;
+                }
+            }
+            .message_content_box{
+                margin-top: $gap;
+                border: 1px solid $borderColor;
+                border-bottom: none;
+                height: 1100px;
+                background-color: #fff;
+                
+            }
+        }
+        .tabs_2{
+            .message_box{
+                margin-top: $gap;
+                border: 1px solid $borderColor;
+                border-right:none;
+                height: 1100px;
+                background-color: #fff;
+                .productList, .operationBut, .messageList_box{
+                    float: left;
+                    height: 100%;
+                    border-right: 1px solid $borderColor;
+                }
+                .productList{
+                    width: 20%;
+                }
+                .operationBut{
+                    width: 10%;
+                    .operation{
+                        margin: 0 auto;
+                        width: 80%;
+                        padding: 5px 12px;
+                        border: 1px solid $borderColor;
+                        border-radius: $borderRadius;
+                    }
+                }
+                .messageList_box{
+                    position: relative;
+                    width: 70%;
+                    .msgListBox{
+                        width: 100%;
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.devDebuggingBox{
+    .title{
+        .titleName, .titleOperation{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .titleName{
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .titleOperation{
+            img{
+                width: 20px;
+                height: 20px;
+                margin: 0 5px 0 30px;
+            }
+            span{
+                vertical-align: middle;
+                color: $themeColor;
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+    }
+}

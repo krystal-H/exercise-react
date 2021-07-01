@@ -1,0 +1,184 @@
+@import '../../../assets/css/variables.scss';
+
+.in-login{
+
+    .login-content-wrapper{
+        margin: auto;
+    
+        .left-intro{
+            flex: 5;
+            display: flex;
+            border-right: 2px solid rgba(233, 233, 233, 1);
+
+
+            .left-content{
+                margin: auto;
+                padding: $gap * 2 $gap / 2 $gap * 2 $gap * 8;
+
+                .intro-title{
+                    font-size:33px;
+                    font-weight:600;
+                    color:rgba(0,0,0,0.65);
+                    margin-bottom : $gap;
+                }
+        
+                .intro-content{
+                    width: 80%;
+                    font-size:22px;
+                    line-height: 33px;
+                    font-weight:400;
+                    color:rgba(0,0,0,0.65);
+                    margin-bottom: $gap;
+                }
+        
+                .intro-img-wrapper{
+                    width: 700px;
+        
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    
+        .login-wrapper{
+            flex: 4;
+            padding: $gap * 2 $gap $gap * 2 $gap * 2;
+            display: flex;
+
+            .login-content{
+                width: 500px;
+                margin: auto;
+
+                .login-title{
+                    font-size:22px;
+                    font-weight:600;
+                    color:rgba(0,0,0,0.65);
+                    margin-bottom: $gap * 2;
+                    text-align: center;
+                }
+
+                .login-other{
+                    font-size: 18px;
+
+                    a{
+                        margin-left: $gap / 2;
+                    }
+                }
+        
+                .login-form-button{
+                    text-align: center;
+                }
+
+                .code-img-wrapper{
+                    height: 55px;
+                }
+
+                .ant-input,.ant-btn{
+                    height: 55px;
+                }
+
+                .ant-form-explain{
+                    line-height: 2;
+                }
+
+                .ant-input-prefix,.ant-input{
+                    font-size:20px;
+                    color: rgba(0,0,0,.25);
+                }
+
+                .ant-input{
+                    text-indent: $gap / 2;                    
+                }
+    
+                .ant-btn{
+                    width:100%;
+                    font-size:20px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-height: 769px) {
+        .login-content-wrapper{
+            width: 100%;
+            margin: auto;
+        
+            .left-intro{
+
+                .left-content{
+                    padding: $gap  $gap / 2 $gap  $gap * 4;
+    
+                    .intro-title{
+                        font-size:24px;
+                        margin-bottom : $gap;
+                    }
+            
+                    .intro-content{
+                        width: 80%;
+                        font-size:16px;
+                        line-height: 33px;
+                        margin-bottom: $gap;
+                    }
+            
+                    .intro-img-wrapper{
+                        width: 500px;
+                    }
+                }
+            }
+        
+            .login-wrapper{
+                flex: 4;
+                padding: $gap;
+                display: flex;
+    
+                .login-content{
+                    width: 400px;
+                    margin: auto;
+    
+                    .login-title{
+                        font-size:18px;
+                        font-weight:600;
+                        color:rgba(0,0,0,0.65);
+                        margin-bottom: $gap * 2;
+                        text-align: center;
+                    }
+    
+                    .login-other{
+                        font-size: 16px;
+    
+                        a{
+                            margin-left: $gap / 2;
+                        }
+                    }
+            
+
+                    .code-img-wrapper{
+                        height: 45px;
+                    }
+    
+                    .ant-input,.ant-btn{
+                        height: 45px;
+                    }
+    
+                    .ant-form-explain{
+                        line-height: 2;
+                    }
+    
+                    .ant-input-prefix,.ant-input{
+                        font-size:18px;
+                    }
+    
+                    .ant-input{
+                        text-indent: $gap / 2;                    
+                    }
+        
+                    .ant-btn{
+                        width:100%;
+                        font-size:18px;
+                    }
+                }
+            }
+        }
+    }
+}

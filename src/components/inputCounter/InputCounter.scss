@@ -1,0 +1,19 @@
+@import '../../../src/assets/css/variables.scss';
+
+.inputCounter{
+    .input-border-color{
+        input{
+            border-color: $warnColor;
+        }
+    }
+    .input-border-color:hover{
+        .ant-input:not(.ant-input-disabled) {
+            border-color: $warnColor;
+            border-right-width: 1px !important;
+        }
+    }
+    .warning{
+        color: $warnColor;
+        margin: 5px 0 0 0;
+    }
+}

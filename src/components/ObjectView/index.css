@@ -1,0 +1,98 @@
+.ov-wrap {
+  position: relative;
+  padding: 8px 13px;
+  font-family: helvitica;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 12px;
+  line-height: 18px;
+  color: #333333;
+  word-wrap: break-word;
+  word-break: break-all;
+  cursor: default;
+}
+.ov-pointer {
+  cursor: pointer;
+}
+.ov-children {
+  padding: 0 5px 0 20px;
+  margin-left: 6px;
+  border-left: 1px solid #ebebeb;
+}
+.ov-line,
+.ov-end {
+  display: inline-block;
+  padding: 3px 0;
+}
+.ov-end {
+  font-weight: bold;
+  color: #002b36;
+  padding-left: 3px;
+}
+.ov-key {
+  display: inline-block;
+  color: #002b36;
+  letter-spacing: 0.5px;
+  vertical-align: top;
+  opacity: 0.85;
+}
+.ov-colon {
+  display: inline-block;
+  margin: 0px 5px;
+  color: #002b36;
+  vertical-align: top;
+}
+.ov-value {
+  display: inline-block;
+  padding-right: 6px;
+  position: relative;
+  color: #cb4b16;
+  cursor: default;
+}
+.ov-icon-container {
+  display: inline-block;
+  width: 17px;
+}
+.ov-icon-container svg {
+  vertical-align: top;
+  color: #586e75;
+  height: 1em;
+  width: 1em;
+  padding-left: 2px;
+}
+.ov-bracket {
+  display: inline-block;
+  font-weight: bold;
+  color: #002b36;
+  cursor: pointer;
+}
+.ov-meta-data {
+  display: inline-block;
+  padding: 0px 0px 0px 10px;
+}
+.ov-ellipsis {
+  display: inline-block;
+  color: #cb4b16;
+  font-size: 18px;
+  line-height: 10px;
+  cursor: pointer;
+}
+.ov-size {
+  color: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  font-style: normal;
+  margin: 0px 6px 0px 0px;
+  cursor: default;
+}
+.ov-value-null,
+.ov-value-undefined {
+  color: #708;
+}
+.ov-value-string {
+  color: #cb4b16;
+}
+.ov-value-number {
+  color: #268bd2;
+}
+.ov-value-boolean {
+  color: #2aa198;
+}

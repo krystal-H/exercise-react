@@ -1,0 +1,126 @@
+@import "../../../../../assets/css/variables.scss";
+
+.device-shadow-page {
+    margin: 12px 24px 0;
+    padding: 24px;
+    background-color: #fff;
+    .marg-top20{
+        margin-top: 20px;
+    }
+    .btn-changemod{
+        margin:20px 0;
+        height: 32px;
+        .fresh-time{
+            float: right;
+        }
+    }
+    
+}
+.lcp-int {
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+}
+
+.lcp-w1 {
+    display: inline-block;
+    width: 224px;
+}
+
+.lcp_c {
+    text-align: center;
+}
+
+.lcp-gray {
+    color: gray;
+}
+
+.lcp-refresh {
+    margin-left: 12px;
+    color: $themeColor;
+    font-size: 16px;
+}
+
+.lcp-title {
+    padding-bottom: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.lcp-status {
+    width: 60%;
+    height: 50px;
+    overflow: hidden;
+    .lcp-status-item {
+        float: left;
+        width: 25%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border: 1px solid #e9e9e9;
+        border-right: 0 none;
+        &:last-child {
+            border-right: 1px solid #e9e9e9;
+        }
+        &.lcp-status-item-active {
+            background-color: #fafafa;
+        }
+    }
+}
+
+.lcp-table-small {
+    .ant-table-thead > tr > th {
+        padding: 8px;
+    }
+    .ant-table-tbody > tr > td {
+        padding: 4px 8px;
+    }
+
+    // 下面的代码使得th标签可以出现...
+    .ant-table-thead > tr > th .ant-table-header-column {
+        display: block;
+    }
+    .ant-table-thead > tr > th .ant-table-header-column div {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.lcp-remark {
+    position: relative;
+    .lcp-remark-export {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+    }
+}
+
+.lcp-chart {
+    width: 100%;
+    height: 340px;
+    margin: 10px 0;
+}
+.width1{
+    width:  20%;
+}
+.width2{
+    width:  25%;
+}
+.width5{
+    width:  20%;
+}
+.width4{
+    width: 8%;
+}
+.width6{
+    width: 9%;
+}
+.width7{
+    width: 9%;
+}
+.width3{
+    width: 9%;
+}

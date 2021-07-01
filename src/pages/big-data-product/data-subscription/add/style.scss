@@ -1,0 +1,173 @@
+@import './../../../../assets/css/variables.scss';
+
+.subscription-add-page-wrapper {
+    font-family: PingFangSC-Medium, PingFang SC sans-serif;
+    color: rgba(0, 0, 0, 0.85);
+    height: 100%;
+    // .step-header-wrapper {
+    //     background-color: $sectionBgColor;
+    //     .step-header {
+    //         width: 70%;
+    //         height: 80px;
+    //         margin: 0 auto;
+    //         background: rgba(248, 248, 248, 1);
+    //         .step-item {
+    //             height: 100%;
+    //             color: rgba(153, 153, 153, 1);
+    //             justify-content: center;
+    //             align-items: center;
+    //             i {
+    //                 width: 30px;
+    //                 height: 30px;
+    //                 background: url(../../../../assets/images/data-subscribe/subscribe_product.png) no-repeat center;
+    //                 background-size: 30px 30px;
+    //             }
+    //             .step-data {
+    //                 background-image: url(../../../../assets/images/data-subscribe/subscribe_data.png);
+    //             }
+    //             .step-way {
+    //                 background-image: url(../../../../assets/images/data-subscribe/subscribe_way.png);
+    //             }
+    //         }
+    //         .current-step {
+    //             color: #fff;
+    //             background-color: #2F78FF;
+    //             .circle-number {
+    //                 border: 1px solid #fff;
+    //             }
+    //         }
+    //         .current-step::after {
+    //             border-left: 20px solid #2F78FF;
+    //         }
+    //         .current-step::before {
+    //             background-color: #2F78FF;
+    //         }
+    //     }
+    // }
+    .add-content-wrapper {
+        padding: 24px;
+        .add-content {
+            height: 100%;
+            background-color: $sectionBgColor;
+            .steps-content {
+                padding-top: 20px;
+                .first-content {
+                    .subscription-object-form {
+                        .product-select {
+                            margin-top: 20px;
+                        }
+                        .product-label {
+                            margin-left: 8px;
+                            margin-top: 8px;
+                            text-align: right;
+                            color: rgba(0, 0, 0, 0.85);
+                            span::before {
+                                display: inline-block;
+                                margin-right: 4px;
+                                color: #f5222d;
+                                font-size: 14px;
+                                font-family: SimSun, sans-serif;
+                                line-height: 1;
+                                content: '*';
+                            }
+                            span::after {
+                                content: ':';
+                                position: relative;
+                                top: -0.5px;
+                                margin: 0 8px 0 2px;
+                            }
+                        }
+                        .remarks {
+                            border: 1px solid rgba(233, 233, 233, 1);
+                            padding: $gap;
+                            .label-wrapper {
+                                .label-item {
+                                    float: left;
+                                    padding: 0 16px 0 6px;
+                                    margin: 6px;
+                                    background: rgba(250, 250, 250, 1);
+                                    height: 40px;
+                                    line-height: 40px;
+                                    text-align: center;
+                                    cursor: pointer;
+                                }
+                                .active-label {
+                                    position: relative;
+                                    border: 1px solid #2F78FF;
+                                    border-radius: 4px;
+                                    color: #2F78FF;
+                                    &::after {
+                                        position: absolute;
+                                        bottom: 0;
+                                        right: 0;
+                                        content: '√';
+                                        width: 0;
+                                        height: 0;
+                                        border: 14px solid;
+                                        line-height: 10px;
+                                        border-color: transparent #2F78FF #2F78FF transparent;
+                                        color: #FFFFFF;
+                                    }
+                                }
+                            }
+                        }
+                        .label-desc {
+                            margin-top: 8px;
+                            margin-left: 4px;
+                        }
+                    }
+                }
+                .second-content {
+                    .product-name {
+                        margin: 37px 0 24px 0;
+                        span:first-child {
+                            display: inline-block;
+                            width: 148px;
+                            text-align: right;
+                            color: rgba(0, 0, 0, 0.85);
+                            margin-right: 14px;
+                        }
+                        span:last-child {
+                            color: rgba(0, 0, 0, 1);
+                        }
+                    }
+                    .protocol-type {
+                        padding-left: 34px;
+                        background-color: $sectionBgColor;
+                        .protocol-type-label {
+                            margin-top: 14px;
+                            margin-right: 16px;
+                            float: left;
+                        }
+                        .protocol-type-label::before {
+                            display: inline-block;
+                            margin-right: 4px;
+                            color: #f5222d;
+                            font-size: 14px;
+                            font-family: SimSun, sans-serif;
+                            line-height: 1;
+                            content: '*';
+                        }
+                        .protocol-type-content {
+                            float: left;
+                            width: 90%;
+                        }
+                    }
+                }
+                .third-content {
+                    .subscription-way-form {
+                        .url-help {
+                            margin-left: 50px;
+                        }
+                        .url-desc, .token-desc {
+                            color: rgba(140, 140, 140, 1);
+                        }
+                    }
+                }
+            }
+            .steps-action {
+                background-color: $sectionBgColor;
+            }
+        }
+    }
+}

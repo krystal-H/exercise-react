@@ -1,0 +1,230 @@
+@import './../../../../assets/css/variables.scss';
+
+.application-detail-wrapper {
+    height: 100%;
+    min-height: 520px;
+    font-family: PingFangSC-Medium, PingFang SC sans-serif;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    .application-detail-header {
+        .app-name, .app-id, .app-secret {
+            margin-right: 150px;
+        }
+        .icon-display {
+            margin-left: 10px;
+        }
+    }
+    .antd-content {
+        // 为了页面铺满整屏强改antd
+        .ant-tabs {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            .ant-tabs-content {
+                flex: 1;
+                .ant-tabs-tabpane {
+                    display: flex;
+                    flex-direction: column;
+                    .application-detail-content, .version-content {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+        .ant-tabs {
+            overflow: inherit;
+            .application-detail-content {
+                position: relative;
+                //height: 100%;
+                margin: 0 $gap $gap $gap;
+                background-color: $sectionBgColor;
+                .edit-app {
+                    position: absolute;
+                    top: 20px;
+                    right: 50px;
+                    z-index: 2;
+                }
+                .detail-line {
+                    line-height: 50px;
+                    .detail-left {
+                        text-align: right;
+                    }
+                    .detail-right {
+                        text-align: left;
+                        .android {
+                            margin-bottom: 10px;
+                        }
+                        .android, .ios {
+                            .android-package, .android-schema, .ios-package, .ios-schema {
+                                padding: 0 26px 0 12px;
+                                margin-right: 20px;
+                                background-color: rgba(250, 250, 250, 1);
+                                height: 32px;
+                                line-height: 32px;
+                                text-align: center;
+                            }
+                        }
+                        .appId-desc, .secret-desc {
+                            margin-left: 10px;
+                            font-size: 12px;
+                            color: rgba(0, 0, 0, 0.4);;
+                        }
+                        .icon-display {
+                            margin: 0 10px;
+                        }
+                    }
+                }
+                .app-package{
+                    line-height: 32px;
+                }
+                .app-icon {
+                    line-height: 16px;
+                }
+                .tips {
+                    margin-bottom: 18px;
+                }
+                .content {
+                    border-radius: 6px;
+                    .content-header {
+                        position: relative;
+                        width: 100%;
+                        .app-type {
+                            height: 82px;
+                            padding: 24px;
+                        }
+                        .add-relation {
+                            position: absolute;
+                            top: 24px;
+                            right: 24px;
+                        }
+                    }
+                    .product-list {
+                        height: 100%;
+                        padding-left: 24px;
+                        .list-item {
+                            position: relative;
+                            padding-top: 20px;
+                            align-items: center;
+                            height: 200px;
+                            width: 13%;
+                            float: left;
+                            border: 1px solid rgba(217, 217, 217, 1);
+                            border-radius: 2px;
+                            margin: 0 20px 20px 0;
+                            .product-name, .product-id {
+                                max-width: 90%;
+                            }
+                            .delete-product-relation {
+                                display: none;
+                                position: absolute;
+                                top: -8px;
+                                right: -8px;
+                            }
+                            &:hover {
+                                .delete-product-relation {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                    @media screen and (max-height: 769px) {
+                        .product-list {
+                            .list-item {
+                                margin-right: 40px;
+                            }
+                        }
+                    }
+                    .list-five {
+                        padding-top: 20px;
+                        align-items: flex-start;
+                    }
+                }
+                .add-version-wrapper {
+                    h5, .add-version {
+                        margin-top: 20px;
+                    }
+                    h5 {
+                        float: left;
+                        font-size: 18px;
+                        margin-left: 20px;
+
+                    }
+                    .add-version {
+                        margin-right: 20px;
+                        float: right;
+                    }
+                }
+                .version-content {
+                    padding:$gap;
+                }
+            }
+        }
+    }
+}
+
+.add-product-relation-modal {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC sans-serif;
+    font-weight: 400;
+
+    .ant-modal-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .ant-modal-body {
+            flex: 1;
+        }
+    }
+
+    .product-relation {
+        position: relative;
+        height: 100%;
+        .desc {
+            color: rgba(140, 140, 140, 1);
+        }
+        .search-wrapper {
+            margin: 20px 0;
+        }
+        .mescroll-refresh {
+            max-height: 500px;
+            overflow: auto;
+            .mescroll {
+                .data-list {
+                    padding-left: 20px;
+                    border-radius: 6px;
+                    border: 1px solid rgba(232, 232, 232, 1);
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    .list-item {
+                        padding-top: 20px;
+                        align-items: center;
+                        width: 16%;
+                        .product-name, .product-id {
+                            display: block;
+                            width: 90%;
+                            text-align: center;
+                            align-items: center;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        .product-pic {
+                            position: relative;
+                            .check-box {
+                                position: absolute;
+                                top: 0;
+                                right: -16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-height: 769px) {
+            .mescroll-refresh {
+                max-height: 300px;
+            }
+        }
+    }
+}

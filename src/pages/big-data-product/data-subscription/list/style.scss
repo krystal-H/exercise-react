@@ -1,0 +1,32 @@
+@import './../../../../assets/css/variables.scss';
+
+.subscription-list-wrapper {
+    font-family: PingFangSC-Medium, PingFang SC sans-serif;
+    color: rgba(0, 0, 0, 0.85);
+    height: 100%;
+    .subscription-header {
+        background-color: $sectionBgColor;
+        padding-left: 23px;
+        height: 63px;
+        line-height: 63px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .page-title {
+        padding: 16px 0 16px 32px;
+        background-color: $sectionBgColor;
+    }
+    .subscription-list-content-wrapper {
+        padding: 23px;
+        .subscription-list-content {
+            height: 100%;
+            background-color: $sectionBgColor;
+            .content-title {
+                border-bottom: 1px solid rgba(233, 233, 233, 1);;
+            }
+            .content {
+                padding: 24px 22px 10px 32px;
+            }
+        }
+    }
+}

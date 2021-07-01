@@ -1,0 +1,10 @@
+@import '../../../../../assets/css/variables.scss';
+
+.but{
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+    .cancel{
+        margin-left: $gap;
+    }
+}

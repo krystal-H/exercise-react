@@ -1,0 +1,23 @@
+@import '../../../assets/css/variables.scss';
+
+
+.menu-wapper{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+
+    .self-menu{
+        height: 100%;
+
+        &.ant-menu-inline-collapsed{
+            width: $menuWidth;
+
+            .ant-menu-submenu-title{
+                padding: 0 22px !important;
+            }
+        }
+    }
+}

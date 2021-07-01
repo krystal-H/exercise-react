@@ -1,0 +1,43 @@
+@import '../../../../../assets/css/variables.scss';
+
+.product-info-module{
+    margin-top: $gap;
+
+    .product-info-item-content{
+        padding: $gap $gap $gap/2;
+        span.small-size{
+            font-size: $explainFontSize;
+            color: #00000066;
+            margin-left: 10px;
+        }
+
+        .product-info-item-name{
+            font-size: $subTitleFontSize;
+            padding: 20px 32px;
+            font-weight: bold;
+            border-bottom: solid 1px #e9e9e9;
+        }
+
+        .ant-upload-select-picture-card i {
+            font-size: 32px;
+            color: #999;
+        }
+          
+        .ant-upload-select-picture-card .ant-upload-text {
+            margin-top: 8px;
+            color: #666;
+        }
+    }
+
+    .icon-wrapper-in-detail{
+        height: 102px;
+        width: 102px;
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+
+}

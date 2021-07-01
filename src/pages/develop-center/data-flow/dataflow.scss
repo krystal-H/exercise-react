@@ -1,0 +1,110 @@
+@import './../../../assets/css/variables.scss';
+
+.dataflow-page{
+    .page-content-header{
+        height: max-content;
+        background-color: $sectionBgColor;
+        padding: $gap * 2/3 $gap;
+    }
+    .guid-step{
+        margin-top: 20px;
+        color: #888;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .step,.arrow{
+            flex:0 1 auto;
+        }
+        .number{
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+            line-height: 22px;
+            border: 1px solid #888;
+            border-radius: 100%;
+            text-align: center;
+            vertical-align: middle;
+            margin-right: 8px;
+
+
+        }
+        .arrow{
+            height: 15px;
+        }
+
+    }
+}
+.page-dataflowdetail{
+    .header{
+        padding: 24px;
+        background-color: #fff;
+        .descriptions{
+            width:90%
+            
+        }
+        .deitbtn{
+            float: right;
+            margin:-80px 24px 0 0;
+        }
+    }
+    .alone-section-content-default{
+        position: relative;
+        .checkbtn,.addbtn{
+            position: absolute;
+            top: -38px;
+        }
+        .addbtn{
+            right: 24px;
+        }
+        .checkbtn{
+            right: 134px;
+
+        }
+    }
+    // .sqltit,.emptysql{
+        // font-size: 12px;
+
+    // }
+    .sqlstr{
+        margin-top: 10px;
+        font-size: 16px;
+        // padding-right: 80px;
+        position: relative;
+        background-color: #fafafa;
+        padding: 12px 120px 12px 24px;
+        a{
+            font-size: 14px;
+            position: absolute;
+            right: 34px;
+            top: 12px;
+            // bottom: 0;
+        }
+    }
+    .emptyimg{
+        margin: 15px 0 10px;
+    }
+    .emptysql{
+        text-align: center;
+        
+        margin-bottom: 20px;
+        color: rgba(0, 0, 0, 0.45);
+    }
+    
+
+}
+
+.hidselectbox{
+    position: relative;
+    top: -20px;
+    left:254px;
+    width: 250px;
+    .hidselect{
+        opacity: 0;
+        width: 250px;
+        height: 14px;
+    }
+    a{
+        position: absolute;
+        right: 0;
+    }
+}

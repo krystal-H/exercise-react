@@ -1,0 +1,1 @@
+export const LOADING_TEST = "LOADING_TEST"

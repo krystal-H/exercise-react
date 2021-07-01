@@ -1,0 +1,21 @@
+@import './../../../assets/css/variables.scss';
+
+.role-management{
+    .page-content-header{
+        height: max-content;
+        background-color: $sectionBgColor;
+        padding: $gap * 2/3 $gap;
+        margin-bottom: $gap;
+        .page-name{
+            height:28px;
+            font-size: $titleFontSize;
+            font-family:PingFangSC-Medium;
+            font-weight:500;
+            color:rgba(0,0,0,0.85);
+            line-height:28px;
+        }
+        .input-wrapper{
+            width: 40%;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "categoryList":[
+        {
+            "categoryId":659,
+            "categoryName":"xlveg",
+            "subCategoryList":[
+                {
+                    "subCategoryId":267,
+                    "subCategoryName":"cmcte",
+                    "deviceTypeList":[
+                        {
+                            "deviceTypeId":974,
+                            "deviceTypeName":"lzpns",
+                            "deviceSubTypeId":511
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

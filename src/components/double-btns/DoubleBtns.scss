@@ -1,0 +1,17 @@
+@import '../../assets/css/variables.scss';
+
+// 下一步
+.next-btn{
+    padding: $gap * 1.5 0;
+    text-align: center;
+    .ant-btn {
+        line-height: 0;
+    }
+    span {
+        padding: 8px 30px;
+        button:first-of-type{
+            margin-right: $gap
+        }
+
+    }
+}

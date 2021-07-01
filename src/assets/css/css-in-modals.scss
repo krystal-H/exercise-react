@@ -1,0 +1,653 @@
+@import './variables.scss';
+@import './tools.scss';
+
+
+$border: 1px solid rgba(233,233,233,1);
+
+// modal中的样式定义
+.self-modal{
+    .ant-modal-title{
+        font-size: $subTitleFontSize;
+        color: rgba(0,0,0,0.85);
+        font-weight: 600;
+    }
+
+    .modal-content-p{
+        color:rgba(102,102,102,1);
+        font-size: $contentFontSize;
+        box-sizing: content-box;
+        padding: 0 $gap / 2;
+
+        &.p-l-0{
+            padding-left: 0;
+        }
+
+        &.single {
+            @extend .single-text;
+        }
+
+        &.grayBg {
+            padding: $gap / 2;
+            background:rgba(245,245,245,0.5);
+            border-radius:2px;
+        }
+
+        .mark{
+            margin-left: $gap / 3;
+            font-size:$subTitleFontSize;
+            font-weight:400;
+            color:rgba(47,120,255,1);
+        }
+        .newline{
+            margin: 10px 0;
+            font-size:18px;
+            font-weight:400;
+            color:rgba(47,120,255,1); 
+        }
+    }
+
+    .modal-content-input{
+        margin-top: $gap / 4;
+    }
+
+    .title-in-modal-content{
+        font-size:18px;
+        font-weight: 600;
+        margin-top: $gap;
+
+        .color3{
+            color: rgba(58, 160, 255, 1);
+        }
+        .color2{
+            color: rgba(255, 51, 51, 1);
+        }
+        .color1{
+            color: rgba(46, 201, 51, 1);
+        }
+
+        .float-right{
+            float: right;
+            font-size: 16px;
+        }
+    }
+
+    .ant-modal-footer{ //此处写法是为了调换 确定和取消按钮的位置，默认位置与设计稿不一样
+        padding: $gap;
+        button:first-child{
+            float: right;
+            margin-left: $gap / 2;
+        }
+    }
+
+    .form-in-modal-p-desc{
+        padding-left: $gap / 2;
+        height:40px;
+        background:rgba(230,247,255,1);
+        border-radius:4px;
+        border:1px solid rgba(186,231,255,1);
+    }
+
+    .icon-wrapper{
+        width: 85px;
+        height: 85px;
+        margin-bottom: $gap / 2;
+    }
+
+    .form-in-modal-submit-btn{
+        text-align: center;
+    }
+
+    .form-in-modal-ok-cancel-btn{
+        text-align: right;
+
+        button{
+            margin-left: 12px;
+        }
+    }
+
+    .text-right{
+        text-align: right;
+    }
+
+    .form-border{
+        position: relative;
+        background:rgba(255,255,255,1);
+        border-radius:6px;
+        border:$border;
+        padding: 8px;
+
+        .re-select-property{
+            top: 10px;
+            right: $gap / 2;
+        }
+    }
+
+    .margin-l-8{
+        display: inline-block;
+        margin-left: 8px;
+    }
+
+    .margin-l-16{
+        display: inline-block;
+        margin-left: 16px;
+    }
+
+    .ant-form-item { //覆盖表单默认值
+        margin-bottom: 12px;
+    }
+
+    &.fiexed-selected-right{ //列表选择框固定在右边时，需将表单进行左移
+
+        .ant-table-scroll{
+            .ant-table-tbody,.ant-table-thead{
+                transform: translateX(-60px);
+            }
+        }
+
+        .ant-table-fixed-right{
+            transform: translateX(-15px);
+        }
+    }
+
+    .ant-table-body-inner{ // 隐藏 表格控件固定行的滚动条
+        &::-webkit-scrollbar{
+            background:transparent;
+            width:0;
+        }
+
+        &::-webkit-scrollbar-thumb{
+            background:transparent;
+        }
+    }
+    .ant-table-body{ // 自定义表格控件内容区域的滚动条
+        @include self-scroll-bar;
+    }
+
+    .data-select-wrapper{
+        padding: $gap / 2;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+
+        .type-select{
+            line-height: 18px;
+            padding-bottom: $gap / 2;
+            border-bottom: 1px solid rgba(232,232,232,1);
+
+            .selects-wrapper{
+                display: flex;
+                flex-direction: row;
+
+                .select-item{
+                    flex: 1;
+                    margin-right: $gap / 2;
+
+                    span.des{
+                        display: inline-block;
+                        font-size: 12px;
+                        margin-top: $gap / 4;
+                    }
+                }
+
+                .select-item-btn{
+                    width: max-content;
+                }
+            }
+        }
+
+        .span-gap {
+            line-height: $gap;
+            margin-right: $gap;
+            cursor: pointer;
+
+            &.actice-btn{
+                background:rgba(47,120,255,1);
+                border-radius:4px;
+                color:rgba(255,255,255,1);
+                padding: 0 $gap / 3;
+            }
+        }
+
+        .p-data-area{
+            padding-top:$gap / 2;
+
+            h3,h4{
+                margin-left: 8px;
+            }
+
+            h3{
+                font-weight: bold;
+            }
+            h4{
+                font-size: 15px;
+            }
+
+            .select-icon{
+                font-size:16px;
+                cursor: pointer;
+            }
+        }
+
+        .data-done{
+            color: #2f78ff;
+            text-align: center;
+            padding-top: $gap;
+            font-size: 16px;
+
+            span{
+                cursor: pointer;
+                padding-right: $gap / 4;
+            }
+        }
+    }
+
+    .select-a{
+        display: inline-block;
+        margin-top: 9px;
+    }
+
+    .gray-text{
+        color:rgba(140,140,140,1);
+        font-size: $explainFontSize;
+    }
+
+    .desc-content{
+        height:60px;
+        line-height: 60px;
+        background:rgba(245,245,245,0.5);
+        border-radius:2px;
+        font-size: $explainFontSize;
+        padding: 0 $gap / 2;
+
+        @extend .single-text;
+
+        span{
+            font-size: $contentFontSize;
+            color:rgba(47,120,255,1);
+        }
+    }
+
+    .h5-tool-wrapper{
+        padding: $gap 0;
+        text-align: center;
+
+        .blank-wrapper{
+            width:200px;
+            line-height: 360px;
+            height:360px;
+            background:rgba(255,255,255,1);
+            box-shadow:0px 2px 8px 0px rgba(0,0,0,0.1);
+            border-radius:2px;
+            border:1px solid rgba(232,232,232,1);
+            margin-bottom: $gap;
+            margin-left: 170px;
+
+            span {
+                color:rgba(0,0,0,0.25);
+                font-size: $subTitleFontSize;
+            }
+            
+            img{
+                width: 99%;
+            }
+        }
+
+        p{
+            margin-right: 122px
+        }
+    }
+
+    .app-items-wrapper{
+
+        max-height: 370px;
+        overflow-y: scroll;
+
+        @include self-scroll-bar;
+
+        
+        .app-item{
+            display: inline-block;
+            margin: $gap / 2;
+            text-align: center;
+    
+            .app-icon{
+                display: flex;
+                position: relative;
+                width:61px;
+                height:61px;
+                background:rgba(247,249,250,1);
+                border:$border;
+                border-radius: 50%;
+                margin-bottom: $gap / 2;
+                cursor: pointer;
+    
+                img{
+                    margin: auto;
+                    height: 40px;
+                    object-fit: contain;
+                    overflow: hidden;
+                }
+    
+    
+                &::before{
+                    content: '';
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    border:$border;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    z-index: 2;
+                }
+    
+                &.active{
+                    &::before{
+                        background:rgba(47,120,255,1);
+                    }
+    
+                    &::after{
+                        content: '';
+                        width: 8px;
+                        height: 4px;
+                        position: absolute;
+                        top: 5px;
+                        right: 4px;
+                        border-left: $border;
+                        border-bottom: $border;
+                        transform: rotate(-45deg);
+                        z-index: 3;
+                    }
+                }
+            }
+    
+            .app-name{
+                display: inline-block;
+                width: 61px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+
+
+    .app-has-pulish{
+        height:40px;
+        line-height: 40px;
+        background:rgba(255,236,228,1);
+        border-radius: 4px;
+        text-indent: 12px;
+        margin-top: 12px;
+    }
+
+
+    .select-update-type{
+        margin-top: $gap;
+        .update-desc{
+            margin-top: $gap / 2;
+            text-indent: 65px;
+        }
+    }
+
+    .q-code-wrapper{
+        text-align: center;
+
+        img{
+            width: 300px;
+        }
+    }
+
+    .item-header{
+        position: relative;
+        padding: 0 12px;
+        margin: 9px 0;
+        height: 30px;
+
+        span{
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+
+    .re-select-property{
+        position: absolute;
+        color: #2f78ff;
+        top: 3px;
+        right: $gap;
+        cursor: pointer;
+    }
+
+    .edit-items-wrapper{
+        max-height: 360px;
+        overflow-y: scroll;
+        @include self-scroll-bar;
+
+        .edit-item{
+            padding: $gap / 2;
+            margin: $gap / 2;
+            position: relative;
+
+            input {
+                text-align: center;
+            }
+
+            .sub-icon{
+                font-size: 16px;
+                color: rgb(217,217,217);
+                margin-left: $gap / 2;
+                cursor: pointer;
+            }
+        }
+
+        .protocol-des{
+            b,span{
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .need-require-lable{
+        .ant-form-item-label::before {
+            display: inline-block;
+            margin-right: 4px;
+            color: #f5222d;
+            font-size: 14px;
+            font-family: SimSun, sans-serif;
+            line-height: 1;
+            content: '*';
+        }
+    }
+
+    .protocol-item-area{
+       .time-protocol-item{
+           position: relative;
+           margin: 12px 0;
+           padding: 12px 24px;
+           line-height: 20px;
+           background:rgba(255,255,255,1);
+           border-radius:4px;
+           border:1px solid rgba(0,0,0,0.15);
+
+           .item-name{
+                font-size:14px;
+                font-weight:400;
+                color:rgba(0,0,0,1);
+           }
+
+           .item-p-l {
+                color:rgba(102,102,102,1);
+                font-size:12px;
+           }
+       }
+    }
+
+    .add-time-service-wrapper{
+        display: flex;
+        flex-direction: row;
+        height:80px;
+        line-height: 80px;
+        background:rgba(255,255,255,1);
+        border-radius:4px;
+        border:1px solid rgba(0,0,0,0.15);
+
+        .protocol-select-area{
+            flex: 1;
+            padding-left: 12px;
+        }
+
+        .control-btns{
+            width: max-content;
+            padding: 0 12px;
+        }
+    }
+
+    .template-wrapper{
+        height: 80vh;
+        max-height: 600px;
+        min-height: 400px;
+
+        .template-img-area{
+            height: 100%;
+            width: 300px;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .big-img{
+                padding: 4px;
+            }
+
+            .img-changes-wrapper{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                height: 80px;
+                padding: $gap / 3;
+                
+                .img-change-item{
+                    width: 50px;
+                    height: 100%;
+                    margin: 0 8px;
+                    cursor: pointer;
+
+                    &.active{
+                        border: 1px solid cornflowerblue;
+                    }
+                }
+            }
+        }
+
+        .template-infos{
+            margin-left: 30px;
+
+            .info-item{
+                height: 24px;
+                line-height: 24px;
+                margin-bottom: 20px;
+
+                .item-title{
+                    width: 70px;
+                    font-weight: 600;
+                    margin-right: $gap / 2;
+                }
+
+                .item-content{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+
+                    span {
+                        width: 24px;
+                        height: 24px;
+                        line-height: 24px;
+                        border: 1px solid gray;
+                        border-radius: 2px;
+                        text-align: center;
+                        margin: 0 10px 10px 0;
+                        cursor: pointer;
+                        
+                        &.active{
+                            border-color: cornflowerblue;
+                        }
+                    }
+                }
+            }
+
+            .template-detail{
+                .ant-tabs-nav {
+                    .ant-tabs-tab{
+                        padding: 12px 0;
+                    }
+                }
+                
+                .self-tab-wrapper{
+                    height: 100%;
+
+                    .ant-tabs-content{
+                        height: calc(100% - 60px);
+
+                        .ant-tabs-tabpane{
+                            overflow-y: scroll;
+                            @include self-scroll-bar;
+                        }
+                    }
+                }
+
+                .analysis-item{
+
+                    margin-bottom: 12px;
+
+                    p{
+                        padding-left: 8px;
+                        color: #3B95FF;
+                    }
+                    table{
+                        table-layout: fixed;
+                        
+                        tr {
+                        
+                            font-size: 10px;
+                            line-height: 26px;
+    
+                            &:not(:last-child){
+                                border-bottom: 1px solid #e7e7e7;
+                            }
+    
+                            th,td{
+                                padding-left: 8px;
+                                width: 27%;
+                            }
+    
+                            th:nth-child(3),td:nth-child(3) {
+                                width: 19%;
+                            }
+    
+                        }
+                        thead{
+                            tr {
+                                font-size: 14px;
+                                border-bottom: 1px solid #ccc;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .template-actions{
+                margin: $gap / 2 $gap  $gap $gap * 2;
+
+                button{
+                    margin-right: $gap;
+                }
+            }
+
+
+        }
+    }
+}

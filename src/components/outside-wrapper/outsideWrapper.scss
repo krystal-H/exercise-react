@@ -1,0 +1,52 @@
+@import '../../assets/css/variables.scss';
+@import '../../assets/css/tools.scss';
+
+
+.body-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+
+    &.limit-w-h{
+        min-width: $minWidth;
+        min-height: $minHeight;
+    }
+
+    // 头部 - 固定高度
+    .page-header-wrapper{
+        height: $headerHeight;
+    }
+    
+    // 内容区域 - 自适应高度
+    .content-wrapper{
+        flex: 1;
+        height: 0;
+        display: flex;
+        flex-direction: row;
+
+        &.content-flex-column{
+            flex-direction: column;
+        }
+    
+        // 左侧导航菜单 - 固定宽度
+        .left-menus{
+            height: 100%;
+            width: $menuWidth;
+            position: relative;
+        }
+    
+        // 右侧区域 - 自适应宽度，和内容区域等高，可滚动，自定义滚动条样式
+        .right-wrapper{
+            flex: 1;
+            width: 0;
+            background:$GrayBgColor;
+            overflow: auto;
+    
+            @include self-scroll-bar;
+        }
+    }
+}
+
+

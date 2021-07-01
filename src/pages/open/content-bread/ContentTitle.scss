@@ -1,0 +1,12 @@
+@import '../../../assets/css/variables.scss';
+
+.content-title-wrapper {
+    // margin-bottom: $gap / 2;
+    padding: 15px $gap 15px $gap;
+    // margin-bottom: -$gap;
+    background-color: #fff;
+    height: max-content;
+    .breadText{
+        padding-left: 5px;
+    }
+}

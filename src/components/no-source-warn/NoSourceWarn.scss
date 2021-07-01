@@ -1,0 +1,15 @@
+.no-source-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0;
+
+    .no-source-tip{
+        height:19px;
+        font-size:13px;
+        font-weight:400;
+        color:rgba(153,153,153,1);
+        line-height:19px;
+        margin-top: 12px;
+    }
+}

@@ -1,0 +1,473 @@
+@import './variables.scss';
+@import './tools.scss';
+
+//flex横向布局
+.flex-row{
+    display: flex;
+    flex-direction: row;
+
+    > .flex1{ //宽度自适应，需要其他元素有固定宽度
+        flex: 1;
+        width: 0;
+    }
+}
+
+//纵向布局
+.flex-column{
+    display: flex;
+    flex-direction: column;
+
+    > .flex1{ //高度自适应，需要其他元素有固定高度
+        flex: 1;
+        height: 0;
+    }
+}
+
+// 对齐列表
+.justify-list-wrapper{
+    padding: $gap / 2 0;
+    text-align: justify;
+
+    .justify-list-item{
+        display: inline-block;
+        padding: $gap / 2 $gap $gap / 2 0;
+        vertical-align: top;
+
+        &.limit-width {
+            width: 230px;
+        }
+    }
+}
+
+// 子元素 水平，垂直居中
+.child-center{
+    display: flex;
+
+    & > *:first-child {
+        margin: auto;
+    }
+}
+
+// y轴滚动
+.scroll-y{
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    @include self-scroll-bar;
+}
+
+// 超出高度滚动
+.height-premit{
+    height: 500px;
+    overflow-y: auto;
+    padding: 0 12px;
+
+    @include self-scroll-bar;
+}
+
+// 单行文本
+.single-text{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// 灰色标签
+.gray-tag{
+    display: inline-block;
+    color: $grayFontColor;
+    background: rgba(243, 243, 243, 1);
+    font-size: $explainFontSize;
+    padding: 0 $gap / 4;
+    margin-right: $gap / 2;
+    border-radius: 2px;
+}
+
+// 常用灰色边框
+.gray-border{
+    @include self-border($borderRadius,$grayBorderColor)
+}
+
+// 清除浮动
+.clearfloat::after{
+    content: " ";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+// footer 样式
+.com-footer{
+    margin-top: 24px;
+    text-align: center;
+    background: #fff;
+    overflow: hidden;
+}
+
+// 区域白色背景
+.section-bg{
+    padding: $gap;
+    border-radius:2px;
+    background-color: $sectionBgColor;
+}
+
+// 灰色背景色
+.gray-bg{
+    background:$GrayBgColor;
+}
+
+.gray {
+    color: rgba(0,0,0,0.45) !important;
+}
+
+.small-fontsize {
+    font-size: $explainFontSize !important;
+}
+
+.middle-fontsize{
+    font-size: $contentFontSize !important;
+}
+
+.bold-text{
+    font-weight: 600;
+}
+
+//  上传图片旁边的说明文字
+.img-explain{
+    font-weight:400;
+    color:rgba(140,140,140,1);
+    padding-left: $gap;
+}
+
+
+.ant-table-fixed table{
+    table-layout: fixed;
+}
+
+.ant-table-tbody > tr > td {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.div-input-upload{
+    position: relative;
+    height: 36px;
+    width: 110px;
+    overflow: hidden;
+
+    .real-input{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+}
+
+// 表格中不同状态的字体颜色
+.verify-statu-1,.h5-statu-1,.cloud-statu-0,.btn-not-has{
+    color:$draftColor;
+}
+.verify-statu-2,.h5-statu-2,.btn-can-control{
+    color:$underWayColor
+}
+.verify-statu-3,.h5-statu-4,.cloud-statu-1,.btn-has{
+    color:$doneColor
+}
+.verify-statu-4,.h5-statu-3{
+    color:$unusualColor
+}
+
+// 说明性的文字样式
+.explain-text{
+    font-size:$explainFontSize;
+    font-weight:400;
+    color:rgba(140,140,140,1);
+}
+
+
+//计数器
+.counter{
+    display: inline-block;
+    margin-left: 10px;
+}
+//说明链接---有图标
+.explainLink{
+    display: inline-block;
+    margin-left: 20px;
+    padding-left: 20px;
+    font-size: $contentFontSize;
+    color: $themeColor;
+    background: url(./assets/images/explainLink.png) no-repeat left;
+    cursor: pointer;
+}
+//说明链接---无图标
+.explainLink-N{
+    display: inline-block;
+    font-size: $contentFontSize;
+    color: $themeColor;
+    cursor: pointer;
+}
+//内容块盒子
+.commonContentBox{
+    margin: $gap;
+    background-color: #fff;
+    .title{
+        padding: 16px 24px;
+        font-size: $subTitleFontSize;
+        font-weight: 700;
+        border-bottom: 1px solid #ddd;
+    }
+    .centent{
+        padding: $gap;
+    }
+    .descript{
+        font-weight: normal;
+    }
+}
+
+/*
+双按钮
+<div className='doubleButton'>
+    <span className='butStyle' onClick={this.click_1}>上一步</span>
+    <span className='butStyle' onClick={this.click_2}>下一步</span>
+</div>
+*/
+.common-doubleButton{
+    margin: 30px 0 20px 0;
+    text-align: center;
+    .butStyle{
+        display: inline-block;
+        padding: 8px 50px;
+        margin-right:30px;
+        background: $themeColor;
+        color: #fff;
+        border: $border;
+        border-radius: $borderRadius;
+        cursor: pointer;
+    }
+    .butStyle:hover{
+        background: #6eb1ff;
+        border-color: #6eb1ff;
+    }
+}
+
+/*
+表单input样式
+<div className='common_title_input'>
+    <span className='common_title'>尺寸：</span>
+    <div className='common_content'>
+        <Input className='input' placeholder="请输入您的尺寸" suffix="mm" allowClear={true} />
+    </div>
+</div>
+*/
+.common_title_input{
+    margin-bottom: $gap;
+    .common_title, .common_content{
+        display: inline-block;
+        vertical-align: middle;
+        
+    }
+    .common_title{
+        // padding-top: 5px;
+        width: 85px;
+        text-align: right;
+        vertical-align: top;
+        color: #000000d9;
+    }
+    .common_content{
+        margin-left: 15px;
+        color: #000000a6;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+// 区域白色背景
+.section-bg-margin{
+    margin: $gap;
+    border-radius:2px;
+    background-color: $sectionBgColor;
+}
+
+
+//新建按钮box - 右侧浮动
+.butFloatRight{
+    float: right
+}
+/*
+搜索栏-单行-盒子
+<div className='searchBox'>
+    <Input.Search placeholder="请输入用户名查找"
+        className='inputSearch'
+    />
+</div>
+*/
+.searchBox{
+    display: inline-block;
+    vertical-align: middle;
+    .ant-input-search{
+        width: 380px;
+    }
+}
+/*
+搜索栏-多行-盒子  *可参考操作日志
+<div className='lineSearchBox'>  盒子
+    <div className='searchCriteria'>
+        搜索内容
+        .ant-input-group .ant-input默认是是200px
+        .ant-input默认是是200px
+    </div>
+    <div className='searchBut'></div>   搜索按钮
+</div>
+*/
+.lineSearchBox{
+    position: relative;
+    .ant-input-search{
+        width: 380px;
+    }
+    .searchCriteria{
+        display: inline-block;
+        width: 80%;
+
+        &.limit-label{ // 用于查询框换行时，不对齐的问题
+            label{
+                min-width: 80px;
+                display: inline-block;
+                text-align: right;
+            }
+        }
+    }
+    .searchBut{
+        float: right;
+    }
+    .ant-input{
+        width:200px;
+    }
+    .ant-input-group .ant-input{
+        width:200px;
+    }
+}
+//外边距左侧距离10px
+.margin-left-10px{
+    display: inline-block;
+    margin-left:10px;
+}
+
+.form-require::before {
+    content: '*';
+    display: inline-block;
+    margin-right: 4px;
+    color: #f5222d;
+    font-size: 14px;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+}
+.form-require::after{
+    content: ':';
+    position: relative;
+    top: -0.5px;
+    margin: 0 0 0 2px;
+}
+.on-require::after{
+    content: '';
+}
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+.use-service-flow-wrapper{
+    padding: $gap $gap 6px;
+
+    .extra-descs{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        margin-top: $gap / 2;
+
+        .descs-item{
+            width: 19%;
+        }
+    }
+}
+
+
+.pre-requst-start{
+    &::before{
+        content: "*";
+        color: red;
+    }
+}
+
+.p-r-12{
+    padding-right: 12px;
+}
+
+.comm-search-box{
+    .inputgroup{
+        display: inline-block;
+        width: auto;
+        vertical-align: top;
+    }
+    .btn{
+        margin-left: 15px;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+.step-header-wrapper {
+    background-color: $sectionBgColor;
+    .step-header {
+        width: 70%;
+        height: 80px;
+        margin: 0 auto;
+        background: rgba(248, 248, 248, 1);
+        .step-item {
+            height: 100%;
+            color: rgba(153, 153, 153, 1);
+            justify-content: center;
+            align-items: center;
+            i {
+                width: 30px;
+                height: 30px;
+                background: url(./assets/images/data-subscribe/subscribe_product.png) no-repeat center;
+                background-size: 30px 30px;
+            }
+            .step-data {
+                background-image: url(./assets/images/data-subscribe/subscribe_data.png);
+            }
+            .step-way {
+                background-image: url(./assets/images/data-subscribe/subscribe_way.png);
+            }
+        }
+        .current-step {
+            color: #fff;
+            background-color: #2F78FF;
+            .circle-number {
+                border: 1px solid #fff;
+            }
+        }
+        .current-step::after {
+            border-left: 20px solid #2F78FF;
+        }
+        .current-step::before {
+            background-color: #2F78FF;
+        }
+    }
+}

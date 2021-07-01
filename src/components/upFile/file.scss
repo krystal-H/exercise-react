@@ -1,0 +1,59 @@
+@import '../../assets/css/variables.scss';
+
+.uploadFile{
+    .common_fileBox, .file{
+        display: inline-block;
+        height: 32px;
+        width: 120px;
+        line-height: 32px;
+    }
+    .common_fileBox{
+        position: relative;
+        text-align: center;
+        border-radius: $borderRadius;
+        background-color: $themeColor;
+        cursor: pointer;
+        .file_explain{
+            line-height: 32px;
+            vertical-align: middle;
+            color: #fff;
+        }
+        .icon{
+            vertical-align: middle;
+            margin-right: 8px;
+            font-size: $contentFontSize;
+        }
+        .file{
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+    }
+    .list{
+        .box{
+            position: relative;
+            margin:$gap/2 0;
+            width: 300px;
+            padding: 5px 10px;
+            border:$grayBorder;
+            border-radius: $borderRadius;
+            .imgSrc{
+                width: 40px;
+                height: 40px;
+                vertical-align: middle;
+            }
+            .icon_shanchu{
+                position: absolute;
+                top: -5px;
+                right: -5px;
+            }
+            .name{
+                display: inline-block;
+                width: 210px;
+                margin-left: 15px;
+                vertical-align: middle;
+            }
+        }
+    }
+}

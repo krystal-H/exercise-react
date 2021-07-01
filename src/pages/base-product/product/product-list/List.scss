@@ -1,0 +1,107 @@
+@import './../../../../assets/css/variables.scss';
+
+.page-main-wrapper{
+    height: 100%;
+    min-height: 520px;
+
+    .page-content-header{
+        height: max-content;
+        background-color: $sectionBgColor;
+        padding: 0  $gap $gap * 2/3;      
+    }
+
+    .bg-wrapper{
+        padding: $gap;
+    }
+
+    .page-main-content-wrapper{
+        background-color: $sectionBgColor;
+        .lists-wrapper{
+            justify-content: flex-start;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            padding: $gap;
+            padding-right: 0;
+
+            &.six-item{
+                justify-content: space-around;
+                padding-right: $gap;
+                align-content: space-around;
+
+                .list-item{
+                    width: 31%;
+                    margin: 0;
+                }
+            }
+    
+            .list-item{
+                width: 30%;
+                height:43%;
+                background: $sectionBgColor;
+                border-radius:$borderRadius;
+                border:1px solid rgba(217,217,217,1);
+                font-weight:400;
+                color:rgba(0,0,0,0.45);
+                margin: 0 $gap $gap 0;
+            }
+        }
+
+        .list-pagination{
+            height: max-content;
+            padding: 0 $gap $gap 0;
+            .self-pa{
+                width: max-content;
+                float: right;
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 769px) {
+    .page-main-wrapper{
+        .page-content-header{
+            padding: 0  $gap $gap / 4;
+        }
+
+        .bg-wrapper{
+            padding: $gap / 2;
+        }
+    }
+
+
+    .page-main-content-wrapper{
+        padding: $gap / 4;
+
+        .lists-wrapper{
+            padding: 0 !important;
+
+            .list-item{
+                height: 46% !important;
+
+                .product-info{
+                    padding: $gap / 2;
+
+                    .product-cut{
+                        padding-top: $gap / 2;
+                        padding-right: $gap / 4;
+                    }
+
+                    .product-info-body{
+                        margin: $gap / 2 0;
+                        line-height: $gap;
+                    }
+                }
+
+                .btn-controls{
+                    height: 40px;
+                    line-height: 40px;
+                }
+            }
+        }
+
+        .list-pagination{
+            padding: 0 $gap $gap / 4 0 !important; 
+        }
+    }
+
+}

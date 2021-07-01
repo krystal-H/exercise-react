@@ -1,0 +1,75 @@
+/**
+    样式变量统一管理
+*/
+
+/*****************长宽、间隔*************/
+
+// 页面最小宽高 
+$minWidth:1300px;
+$minHeight:620px;
+
+// header高度，导航宽度，二级tab宽度
+$headerHeight:52px;
+$menuWidth: 160px;
+$tabsWidth:140px;
+
+// 元素间隔 -- 设置padding，margin 可使用此变量为基准值 eg: $gap / 2  |  $gap  |   2 * $gap
+$gap:24px;
+
+$borderRadius:4px;
+
+/****************End******************/
+
+/*****************颜色****************/
+
+// 主题色
+$themeColor:#2F78FF;
+
+// 内容字体颜色
+$fontColor: rgba(0,0,0,0.85);               // 字体颜色  -- 用于块儿中较为突出的部分
+$subFontColor: rgba(0,0,0,0.65);            // 子内容字体颜色  -- 用于块儿中次级内容
+$grayFontColor: rgba(140, 140, 140, 1);     // 灰色字体颜色
+$disableFontColor: rgba(191, 191, 191, 1);  // 禁用状态字体颜色
+
+// 不同标记色 字体色
+$draftColor:rgba(211,211,211,1);      // 草稿状态
+$doneColor: rgba(78,166,64,1);        // 完成状态
+$underWayColor:rgba(47, 120, 255, 1); // 进行中状态
+$unusualColor:rgba(245, 133, 66, 1);  // 异常状态
+$warnColor:rgba(240, 66, 66, 1);      // 警告状态   
+
+// 主背景色
+$GrayBgColor:rgba(233,233,233,1);
+
+// header背景色
+$headerBgColor:rgba(49,56,77,1);
+
+// 内容块儿背景色
+$sectionBgColor:rgba(255,255,255,1);
+
+// 灰色边框色
+$grayBorderColor:rgba(217,217,217,1);
+
+// 高亮背景色
+$activeBgColor:rgba(47,120,255,1);
+
+/*****************End*****************/
+
+
+
+/*****************字体大小**************/
+
+$titleFontSize:20px;     // 标题字体大小
+$subTitleFontSize: 16px; // 子标题字体大小
+$contentFontSize: 14px;  // 内容字体大小
+$explainFontSize: 12px;  // 补充文本字体大小
+
+/******************End******************/
+
+
+/****************边框**********************/
+
+$border:1px solid $themeColor;
+$grayBorder:1px solid $grayBorderColor;
+
+/****************End******************/

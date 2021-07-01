@@ -1,0 +1,190 @@
+@import '../../../assets/css/variables.scss';
+@import '../../../assets/css/tools.scss';
+
+.page-header{
+    color: #fff;
+    background: $headerBgColor;
+    box-shadow:0px 1px 4px 0px rgba(0,21,41,0.12);
+
+    .logo,.user-icon-wrapper,.menu-icon,.message-icon{
+        display: inline-block;
+        height: $headerHeight;
+        line-height: $headerHeight;
+    }
+
+    .logo{
+        width: 260px;
+        color: #fff;
+        background: $headerBgColor;
+        text-align: left;
+        text-indent: $gap * 1.5;
+        font-weight: 600;
+        border-right: 1px solid rgb(48, 54, 73);
+
+        img{
+            height:26px;
+        }
+
+        > span{
+            font-size:14px;
+            font-family:PingFangSC;
+            font-weight:500;
+            vertical-align: middle;
+            color:rgba(255,255,255,1);
+            margin-left: $gap / 2;
+        }
+    }
+
+    .menu-icon{
+        color:rgba(140,140,140,1);
+        font-size: $subTitleFontSize;
+        margin-left: $gap / 2;
+        cursor: pointer;
+    }
+
+    .user-icon-wrapper{
+        position: relative;
+        float: right;
+        margin-right: $gap;
+        font-size: 10px;
+        
+        .user-img {
+            height: 36px;
+            border-radius: 50%;
+            margin:0  4px;
+        }
+
+        .menus-wrapper{
+            display: none;
+            width: 240px;
+            position: absolute;
+            top: $headerHeight;
+            right: - $gap;
+            background: $headerBgColor;
+            font-size: 14px;
+            color:rgba(255,255,255,1);
+            z-index: 3;
+
+            .icon-base-info,.user-menus{
+                padding: 0 $gap;
+            }
+
+            .icon-base-info{
+                display: flex;
+                border-bottom: 1px solid #ccc;
+                height: $headerHeight;
+                line-height: $headerHeight;
+
+                a{
+                    display: inline-block;
+                    width: 140px;
+                }
+
+                .right{
+                    margin-left: $gap / 4;
+                    cursor: pointer;
+                }
+            }
+
+            .user-menus{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                .menus-item{
+                    width: 50%;
+                    height: $headerHeight - 10;
+                    line-height: $headerHeight - 10;
+                    cursor: pointer;
+
+                    a{
+                        color:rgba(255,255,255,1);
+                    }
+
+                    &:nth-child(2n) {
+                        text-align: right;
+                    }
+                    
+                    &:nth-child(2n + 1) {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        &:hover{
+            .user-img{
+                margin-top: 3px;
+            }
+            .menus-wrapper{
+                display: block;
+            }
+        }
+    }
+
+    .message-icon{
+        float: right;
+        width: 40px;
+        text-align: center;
+        margin-right: $gap;
+        font-size: 22px;
+        cursor: pointer;
+
+        &:hover{
+            font-size: 23px;
+        }
+
+        .nums-wrapper{
+            position: relative;
+
+            &::after{
+                content: attr(data-nums);
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                top: -10px;
+                right: -10px;
+                background-color: red;
+                border-radius: 10px;
+                color: #fff;
+                font-size: 10px;
+                line-height: 20px;
+                text-align: center;
+            }
+
+            &.max-num {
+                &::after{
+                    width: 28px;
+                }
+            }
+        }
+
+        .message{
+            font-size: 14px;
+        }
+    }
+
+    .instance{
+        float: right;
+        margin-right: 20px;
+        span{
+            display: inline-block;
+            vertical-align: bottom;
+            margin-right: 10px;
+            margin-top: 16px;
+        }
+        .instancenam{
+            font-size: 15px;
+        }
+        .btn{
+            color: #6fb3f3;
+            cursor: pointer;
+        }
+
+    }
+    .instanceMod{
+        height: 300px;
+        background-color: red;
+    }
+
+}

@@ -1,0 +1,240 @@
+.sql-analysis-wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .left-wrapper{
+        width: 400px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid #ccc;
+
+        .table-tree-wrapper{
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .table-field-list{
+            height: 360px;
+
+            .table-filed-content{
+                padding: 10px 24px;
+                height: 330px;
+                // overflow: auto;
+            }
+        }
+
+        .tool-btns{
+            height: 46px;
+            text-align: center;
+            line-height: 46px;
+            border-top: 1px solid #ccc;
+        }
+
+        .title{
+            height: 46px;
+            line-height: 46px;
+            padding: 0 24px;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    .sql-code-edit-wrapper{
+        flex: 1;
+        height: 100%;
+        padding: 24px 0;
+        .paramtable{
+            margin: 0;
+            
+        }
+        .configitem{
+            position: relative;
+            padding-left: 100px;
+            padding-right: 24px;
+            margin-bottom: 24px;
+            .itemname{
+                position: absolute;
+                width: 80px;
+                left: 0 ;
+                top: 0;
+                text-align: right;
+            }
+            .ov-key-value{
+                max-height: 500px;
+                // background-color: #ccc;
+                overflow: auto;
+
+            }
+            
+        }
+        
+        .sqlbox{
+            padding: 12px 12px 12px 72px;
+            position: relative;
+            min-height: 30px;
+            font-size: 16px;
+            background-color: #fafafa;
+            .tit{
+                position: absolute;
+                left:12px ;
+                top: 12px;
+                color: #a21676;
+            }
+        }
+       
+    }
+    .topbtn{
+        padding: 0 24px 16px;
+        text-align: right;
+    }
+}
+
+.sql-modal-self-class{
+    .sql-config-wrapper{
+        max-height: 700px;
+        overflow-y: auto;
+    }
+    .ant-collapse{
+        border: none !important;
+        height: 100% !important;
+
+        .ant-collapse-item{
+            border-bottom: none !important;
+        }
+
+        .ant-collapse-header{
+            background-color: #f1f1f1 !important;
+            padding-top: 6px!important;
+            padding-bottom: 6px!important;
+        }
+
+        .ant-collapse-content-box{
+            background-color: #f7f7f7;
+        }
+    }
+
+    .ant-modal-body{
+        padding: 0;
+    }
+    .ant-form-item{
+        margin-bottom: 8px;
+    }
+
+    .test-config-wrapper{
+        max-height: 700px;
+        height: 600px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: row;
+        padding: 24px;
+
+        h3{
+            font-weight: bold;
+            margin-bottom: 24px;
+        }
+
+        p{
+            padding-left: 12px;
+            .label{
+                display: inline-block;
+                margin-right: 12px;
+            }
+        }
+
+        .btn{
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .test-left{
+            flex: 1;
+            padding-right: 24px;
+            border-right: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+
+            .test-content{
+                flex: 1;
+            }
+        }
+
+        .test-right{
+            flex: 1;
+            padding-left: 24px;
+            display: flex;
+            flex-direction: column;
+
+            .detail{
+                flex: 1;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    .type-select{
+        height: 50px;
+        line-height: 50px;
+        display: flex;
+        flex-direction: row;
+
+        & > span{
+            flex: 1;
+        }
+    }
+}
+
+
+.ant-table{
+    line-height: 1 !important;
+    background-color: #fff;
+
+    .ant-table-thead > tr > th{
+        background-color: #ebebeb;
+    }
+
+    tr > td,tr > th {
+        padding: 8px;
+    }
+}
+
+.modal-sql-paramsconfig{
+    .param{
+        position: relative;
+        padding-left: 100px;
+        margin-bottom: 20px;
+        .key{
+            position: absolute;
+            padding-right: 5px;
+            width: 90px;
+            left: 0;top: 2px;
+            text-align: right;
+        }
+        .input{
+            width: 80%;
+        }
+    }
+    .testbtn{
+        margin-left:182px;
+    }
+}
+
+.modal-downHistoryLi{
+    .topbtnbox{
+        position: relative;
+        height: 30px;
+        .addbtn{
+            position: absolute;
+            right: 0;
+            bottom: 5px;
+        }
+        .refresh{
+            position: absolute;
+            left: 4px;
+            bottom: 14px;
+        }
+    }
+}

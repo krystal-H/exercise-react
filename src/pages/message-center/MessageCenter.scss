@@ -1,0 +1,42 @@
+@import '../../assets/css/variables.scss';
+
+.message-wrapper,.table-wrapper{
+    padding: $gap;
+
+    .ant-badge{
+        margin-right: 24px;
+    }
+}
+
+.table-wrapper{
+    padding-top: 0;
+}
+
+.message-detail-wrapper{
+    padding: $gap;
+    position: relative;
+
+    .message-title{
+        text-align: center;
+    }
+
+    .message-tips{
+        border-bottom: 1px solid #ccc;
+        line-height: 30px;
+
+        span{
+            margin-right: $gap * 3;
+        }
+    }
+
+    .message-content{
+        padding: $gap 0;
+    }
+
+    .left-top{
+        position: absolute;
+        top: $gap;
+        right: $gap;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,20 @@
+@import '../../assets/css/variables.scss';
+
+.alone-section-wrapper{
+    margin: $gap;
+    border-radius:2px;
+    background-color: $sectionBgColor;
+
+    .alone-section-title{
+        font-size: 16px;
+        height: 50px;
+        line-height: 50px;
+        font-weight: 600;
+        padding: 0 $gap;
+        border-bottom: $grayBorder;
+    }
+
+    .alone-section-content-default{
+        padding: $gap / 2 $gap;
+    }
+}

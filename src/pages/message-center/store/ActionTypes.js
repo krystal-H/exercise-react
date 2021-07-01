@@ -1,0 +1,1 @@
+export const UPDATE_NEW_MESSAGE_NUMS = "update-new-message-nums"

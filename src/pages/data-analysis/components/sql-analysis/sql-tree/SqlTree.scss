@@ -1,0 +1,18 @@
+.sql{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    .select-wrapper{
+        float: right;
+    }
+
+    .tree-content{
+        flex: 1;
+        padding: 16px 24px;
+        overflow: auto;
+        .proselect{
+            width: 100%;
+        }
+    }
+}

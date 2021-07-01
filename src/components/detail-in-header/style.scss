@@ -1,0 +1,10 @@
+@import '../../assets/css/variables.scss';
+
+.header-detail {
+    min-height: 2* $gap;
+    line-height: 2* $gap;
+    padding: 0 0 0 2*$gap;
+    background-color: $sectionBgColor;
+}
+
+

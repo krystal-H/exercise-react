@@ -1,0 +1,26 @@
+@import '../../../../../assets/css/variables.scss';
+
+.applyRelease{
+    .app-guide-wrapper{
+        .use-flow-wrapper{
+            margin-top: $gap;
+        }
+    }
+    .app-control{
+        .service-title{
+            .back{
+                border-right:none;
+            }
+            .title_apply{
+                font-size: 18px;
+                font-weight: 600;
+                color: rgba(0, 0, 0, 0.85);
+                margin-left: 16px;
+            }
+        }
+    }
+    .common-doubleButton{
+        margin: none;
+        padding-bottom: 30px;
+    }
+}

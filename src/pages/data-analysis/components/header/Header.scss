@@ -1,0 +1,23 @@
+$height:52px;
+$gap:24px;
+
+
+.data-analysis-header{
+    height: $height;
+    line-height: $height;
+    padding: 0 $gap;
+    background-color: #fff;
+
+    .d-a-name{
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .tools-wrapper{
+        float: right;
+
+        button{
+            margin-left: $gap;
+        }
+    }
+}

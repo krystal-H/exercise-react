@@ -1,0 +1,74 @@
+@import '../../../../assets/css/variables.scss';
+
+//添加产品基础信息
+.productInformation{
+    .basicsInfoBox,.technicalProtocolsBox{
+        .aListInfo{
+            margin-bottom: $gap;
+            position: relative;
+            .aListTitle{
+                margin-right: 10px;
+            }
+            .opacity{
+                opacity:0
+            }
+            .input{
+                width: 300px;
+            }
+            .select{
+                width: 333px;
+            }
+            .explain{
+                margin:12px 0 0 70px;
+                font-size: $explainFontSize;
+            }
+            .joinUpExplain_explainPng{
+                width: 230px;
+                font-size: $explainFontSize;
+                text-align: center;
+                .explainPng{
+                    height: 60px;
+                    background: url(../../../../assets/images/joinUpExplain.png) no-repeat center; 
+                }
+            }
+            .joinUpExplain_thePhirdParty{
+                width: 400px;
+                font-size: $explainFontSize;
+                text-align: center;
+                .thePhirdParty{
+                    height: 60px;
+                    background: url(../../../../assets/images/thePhirdParty.png) no-repeat center; 
+                }
+            }
+        }
+        .msgSelectBox{
+            // width: 900px;
+            display: inline-block;
+            .safety-selection-box{
+                .title-box,.onExplain,._explain{
+                    line-height: 20px;
+                }
+                .title-box{
+                    text-align: center;
+                    width: auto;
+                }
+            }
+        }
+    }
+    .addProductBut{
+        width: 150px;
+        margin: 0 10px;        
+    }
+    .has-success.has-feedback .ant-form-item-children-icon{
+        right: -32px;
+    }
+
+    .has-feedback :not(.ant-input-group-addon) > .ant-select .ant-select-arrow{
+        right: 11px;
+    }
+    .ant-form-text{
+        color: #2f78ff;
+        cursor: pointer;
+        padding-left: $gap/2;
+    }
+}

@@ -1,0 +1,85 @@
+@import './../../../../assets/css/variables.scss';
+
+.device-data-api-list-wrapper {
+    font-weight: 500;
+    header {
+        padding-left: 32px;
+        height: 61px;
+        line-height: 61px;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.85);
+        background-color: $sectionBgColor;
+    }
+    .data-api-content-wrapper {
+        padding: 24px;
+        .data-content {
+            margin-bottom: 24px;
+            background-color: $sectionBgColor;
+            .data-wrapper {
+                padding: 32px;
+                .data-dimension, .data-index {
+                    margin-bottom: 23px;
+                    border: 1px solid rgba(233, 233, 233, 1);
+                    border-radius: 4px 4px 0 0;
+                    header {
+                        padding-left: 24px;
+                        height: 44px;
+                        line-height: 44px;
+                        font-size: 14px;
+                        color: rgba(0, 0, 0, 0.85);
+                        background-color: #FAFAFA;
+                        border-bottom: 1px solid rgba(233, 233, 233, 1);
+                    }
+                    ul {
+                        padding: 0 24px;
+                        margin-bottom: 0;
+                        list-style: none;
+                        li {
+                            float: left;
+                            width: 50%;
+                            height: 54px;
+                            line-height: 54px;
+                            border-bottom: 1px solid rgba(233, 233, 233, 1);
+                            .key, .value {
+                                display: inline-block;
+                                vertical-align: top;
+                            }
+                            .value {
+                                max-width: 300px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            .key {
+                                width: 200px;
+                                text-align: right;
+                            }
+                            .value {
+                                text-align: left;
+                            }
+                        }
+                        li:last-child, li:nth-last-child(2) {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+        .api-list-content {
+            border: 1px solid rgba(233, 233, 233, 1);
+            border-radius: 2px;
+            background-color: $sectionBgColor;
+            header {
+                padding-left: 32px;
+                height: 55px;
+                line-height: 55px;
+                font-size: 16px;
+                color: rgba(0, 0, 0, 0.85);
+                border-bottom: 1px solid rgba(233, 233, 233, 1);
+            }
+            .api-table-wrapper {
+                padding: 32px;
+            }
+        }
+    }
+}

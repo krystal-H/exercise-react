@@ -1,0 +1,15 @@
+.p-flex{
+    display: flex;
+    flex-direction: row;
+    // justify-content:space-between;
+    .tit{
+        font-weight: 600;
+        color: rgba(0,0,0,0.7);
+    }
+
+    .flex-item{
+        // width: 25%;
+        margin-right: 30px;
+        color: rgba(0,0,0,0.65);
+    }
+}

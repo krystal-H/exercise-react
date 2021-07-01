@@ -1,0 +1,21 @@
+{
+    "code": 0,
+    "data": [
+        {
+            "stepId": 138,
+            "productId": 9914,
+            "configInfo": "{\"loaded\":true}",
+            "type": 1,
+            "createTime": 1569460903000,
+            "modifyTime": null
+        },
+        {
+            "stepId": 149,
+            "productId": 9914,
+            "configInfo": "{\"enableApp\":true,\"enableCloud\":true,\"enableScene\":true}",
+            "type": 3,
+            "createTime": 1569831923000,
+            "modifyTime": 1569803164000
+        }
+    ]
+}

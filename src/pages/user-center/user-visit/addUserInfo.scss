@@ -1,0 +1,42 @@
+@import './../../../assets/css/variables.scss';
+
+.add-user-box{
+    .label{
+        margin-top: 8px;
+    }
+    .uesrName{
+        position: relative;
+        .delete{
+            position: absolute;
+            cursor: pointer;
+            right: $gap*2;
+            top: 10px;
+        }
+    }
+    .addUesr{
+        margin-left:100px; 
+    }
+    .but{
+        height: 50px;
+        line-height: 50px;
+        text-align: right;
+        .cancel{
+            margin-left: $gap;
+        }
+    }
+
+    .reset-select{
+        .reset{
+            padding-top: $gap/2;
+        }
+    }
+    .input{
+        // display: block;
+        margin-bottom: $gap/2;
+    }
+    .user-name-remark{
+        margin-bottom: $gap/2;
+        font-size: $explainFontSize;
+    }
+    
+}

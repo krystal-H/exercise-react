@@ -1,0 +1,103 @@
+@import '../../../assets/css/variables.scss';
+@import '../../../assets/css/tools.scss';
+
+.role-add{
+    .commonContentBox{
+        .input{
+            width:300px;
+        }
+        .postil{
+            margin-left: $gap;
+            font-size: $explainFontSize;
+            font-weight: 400;
+        }
+    }
+    .jurisdiction-box{
+        display: inline-block;
+    }
+    .ratio{
+        margin: $gap $gap/2 $gap $gap;
+        width: 42%;
+    }
+    .placeholder{
+        width: 60px;
+    }
+    .ratio-show{
+        margin: $gap $gap $gap/2 $gap/2;
+        width: 42%;
+    }
+    .float-right{
+        margin-left: 282px;
+    }
+    .tree-fer{
+        position: relative;
+        height: 550px;
+        .jurisdiction{
+            float: left;
+            margin: 0 $gap/2 0 $gap;
+            width: 42%;
+            height: 500px;
+            border: $grayBorder;
+            border-radius: $borderRadius;
+            overflow: auto;
+            @include self-scroll-bar;
+        }
+        .jurisdiction-select-show{
+            position: relative;
+            float: left;
+            margin: 0 $gap 0 $gap/2;
+            width: 42%;
+            height: 500px;
+            border: $grayBorder;
+            border-radius: $borderRadius;
+            .select-show-box{
+                height: 460px;
+                overflow: auto;
+                @include self-scroll-bar;
+            }
+            .empty{
+                color:$themeColor;
+                line-height: 38px;
+                border-top: $grayBorder;
+                padding-left: $gap;
+                cursor: pointer;
+            }
+            .common_title{
+                position: absolute;
+                top: -30px;
+                left: 0;
+            }
+        }
+        .shuttle{
+            line-height: 30px;
+            float: left;
+            width: 60px;
+            height: 500px;
+            .right,.left{
+                height: 32px;
+                border: $grayBorder;
+                border-radius: $borderRadius;
+                text-align: center;
+                color: $subFontColor;
+                cursor: pointer;
+            }
+            .right{
+                margin: 185px 10px 25px 10px;
+            }
+            .left{
+                margin: 0 10px;
+            }
+            .right:hover,.left:hover{
+                background-color: $themeColor;
+                border: $themeColor;
+                color: #fff;
+            }
+        }
+    }
+    .mustiinput:before{
+        content: "*";
+        color: red;
+        margin-right: 5px;
+    }
+        
+}
